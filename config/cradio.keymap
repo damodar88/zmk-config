@@ -8,6 +8,7 @@
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
+#define GIT_CLONE() &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E
 
 / {
     behaviors {
@@ -53,15 +54,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ 1        │  3       │  5       │  7       │ 9        │   │          │          │ UP       │          │  :       │
-            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &trans     &trans     &kp UARW    &trans     &kp COLON
+            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &none      &none      &kp UARW    &none      &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 2        │  4       │  6       │  7       │ 8        │   │ 0         │ LEFT     │ DOWN     │ RIGHT    │  ;       │
             &kp N2      &kp N4     &kp N6     &kp N7    &kp N8         &kp N0      &kp LARW   &kp DARW   &kp RARW    &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  /       │  *       │   │          │          │          │          │          │
-            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK     &trans     &trans     &trans     &trans     &trans
+            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK     GIT_CLONE()      &none      &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans      &trans        &trans     &trans
+                                             &none       &none         &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -70,15 +71,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ DELETE   │          │          │          │          │   │ $        │ &        │  {       │  }       │ @        │
-            &kp DEL      &trans    &trans     &trans  &kp C_AC_PRINT   &kp DLLR   &kp AMPS   &kp LBRC   &kp RBRC   &kp AT
+            &kp DEL      &none     &none      &none   &kp C_AC_PRINT   &kp DLLR   &kp AMPS   &kp LBRC   &kp RBRC   &kp AT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │ #        │ ~        │  (       │  )       │  %       │
-            &trans       &trans     &trans    &trans    &trans         &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
+            &none        &none      &none     &none     &none          &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │ COPY     │   CUP    │          │ PASTE    │   │  !       │ ?        │  [       │  ]       │  ^       │
-            &trans    &kp K_COPY  &kp K_CUT    &trans  &kp K_PASTE      &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
+            &none     &kp K_COPY  &kp K_CUT    &none   &kp K_PASTE      &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -87,15 +88,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+           &sys_reset  &none      &none      &none     &bt BT_SEL 0    &none      &none      &none      &none     &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+          &bootloader  &none      &none      &none     &bt BT_SEL 1    &none      &none      &none      &none     &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+            &none      &none      &none     &bt BT_CLR &bt BT_SEL 2    &none      &none      &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
