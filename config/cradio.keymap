@@ -76,7 +76,7 @@
             &trans       &trans     &trans    &trans    &trans         &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │ COPY     │   CUP    │          │ PASTE    │   │  !       │ ?        │  [       │  ]       │  ^       │
-            &trans    &kp C_AC_CO  &kp K_CUT    &trans  &kp C_AC_PASTE  &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
+            &trans    &kp K_COPY  &kp K_CUT    &trans  &kp K_PASTE      &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
