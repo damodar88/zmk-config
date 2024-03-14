@@ -55,7 +55,7 @@
         //│ Z        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
             &kp Z       &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp LCTRL   &lt 2 SPACE    &lt 1 ENTER  &kp LWIN
+                                            &kp LCTRL   &lt 1 SPACE    &lt 2 ENTER  &kp LWIN
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -70,7 +70,7 @@
             &kp N2      &kp N4     &kp N6     &kp N7    &kp N8         &kp N0      &kp LARW   &kp DARW   &kp RARW    &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  /       │  *       │   │          │          │          │          │          │
-            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK    MACRO(git_clone)  &none   &none      &none      &none 
+            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK     &none       &none      &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none       &none         &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -83,11 +83,11 @@
         //│ DELETE   │          │          │          │          │   │ $        │ &        │  {       │  }       │ @        │
             &kp DEL      &none     &none      &none   &kp C_AC_PRINT   &kp DLLR   &kp AMPS   &kp LBRC   &kp RBRC   &kp AT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │ #        │ ~        │  (       │  )       │  %       │
-            &none        &none      &none     &none     &none          &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
+        //│    |     │          │          │          │          │   │ #        │ ~        │  (       │  )       │  %       │
+            &kp PIPE     &none      &none     &none     &none          &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │ COPY     │   CUP    │          │ PASTE    │   │  !       │ ?        │  [       │  ]       │  ^       │
-            &none     &kp K_COPY  &kp K_CUT    &none   &kp K_PASTE      &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
+            &none     &kp K_COPY  &kp K_CUT    &none   &kp K_PASTE      &kp EXCL  &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
