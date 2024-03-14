@@ -44,7 +44,7 @@
         //│ Z        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
             &kp Z       &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp LCTRL   &lt 2 ENTER    &lt 1 SPACE  &kp LWIN
+                                            &kp LCTRL   &lt 2 SPACE    &lt 1 ENTER  &kp LWIN
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
