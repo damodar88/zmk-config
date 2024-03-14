@@ -9,7 +9,7 @@
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
-#define GIT_CLONE() &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E
+#define GIT_CLONE(k1) &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E
 
 / {
     behaviors {
@@ -69,7 +69,7 @@
             &kp N2      &kp N4     &kp N6     &kp N7    &kp N8         &kp N0      &kp LARW   &kp DARW   &kp RARW    &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  /       │  *       │   │          │          │          │          │          │
-            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK    MACRO(dir_up)  &none   &none      &none      &none 
+            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK    GIT_CLONE(B)  &none   &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none       &none         &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
