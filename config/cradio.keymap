@@ -32,7 +32,14 @@
         };
     };
 
-
+    / {
+    macros {
+        MACRO(vim_q,  &kp COLON &kp Q &kp EXCL)
+        MACRO(vim_s,  &kp COLON &kp X)
+        MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
+        MACRO(git_clone, &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E)
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
