@@ -32,14 +32,13 @@
         };
     };
 
-    / {
+    
     macros {
         MACRO(vim_q,  &kp COLON &kp Q &kp EXCL)
         MACRO(vim_s,  &kp COLON &kp X)
         MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
         MACRO(git_clone, &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E)
         };
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -55,7 +54,7 @@
         //│ Z        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
             &kp Z       &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp LCTRL   &lt 1 SPACE    &lt 2 ENTER  &kp LWIN
+                                            &kp LCTRL   &lt 1 SPACE   &lt 2 ENTER  &lt 3 LWIN
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -97,8 +96,8 @@
         tri_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &none      &none      &none     &bt BT_SEL 0    &none      &none      &none      &none     &sys_reset
+        //│ RESET    │          │          │          │PROFILE 0 │   │  BKS     │ DELETE   │          │          │  RESET   │
+           &sys_reset  &none      &none      &none     &bt BT_SEL 0     BSPC      &kp DEL      &none      &none     &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
           &bootloader  &none      &none      &none     &bt BT_SEL 1    &none      &none      &none      &none     &bootloader
