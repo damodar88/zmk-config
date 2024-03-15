@@ -7,7 +7,7 @@
 
 / {
     macros {
-        MACRO(git_clone, &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E);
+        MACRO(git_clone, &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E)
     };
 };
 
@@ -50,7 +50,7 @@
             HRML(A,        O,        E,         U)       &kp I          &kp D      HRMR(H,    T,         N,         S)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ Z        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
-            &kp Z       &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
+ &kp Z  MACRO(git_clone) &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &kp LCTRL   &lt 1 SPACE    &lt 2 ENTER  &kp LWIN
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
