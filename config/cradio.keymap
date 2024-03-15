@@ -125,7 +125,7 @@ name: name##_macro {                      \
         MACRO(git_clone,    &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E)
         MACRO(git_checkout, &kp G &kp I &kp T &kp SPACE &kp C &kp H &kp E &kp C &kp K &kp O &kp U &kp T)
         MACRO(git_push,     &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp S &kp H &kp SPACE &kp O &kp R &kp I &kp G &kp I &kp N)
-        MACRO(git_commit,   &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE &kp QUOTE &kp F &kp E &kp A &kp T)
+        MACRO(git_commit,   &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE)
         MACRO(git_branch,   &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H)
     };
 };
