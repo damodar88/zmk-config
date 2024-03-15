@@ -146,6 +146,8 @@ name: name##_macro {                      \
 #define CTRL_C   &kp LCTRL &kp C
 #define CTRL_X   &kp LCTRL &kp X
 
+#define GIT_ADD  &kp G &kp I &kp T &kp SPACE &kp A &kp D &kp D &kp SPACE &kp MINUS &kp A
+
 #define NAV_UP   &kp LS(LA(UARW))
 #define NAV_DN   &kp LS(LA(DARW))
 #define ________ &trans
@@ -217,11 +219,11 @@ name: name##_macro {                      \
         //│ CLONE    │ CHECKOUT │          │          │          │   │ $        │ &        │  {       │  }       │ @        │
          &git_clone &git_checkout &git_branch &git_commit &git_push    &kp DLLR   &kp AMPS   &kp LBRC   &kp RBRC   &kp AT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    |     │ ADD A    │          │          │          │   │ #        │ ~        │  (       │  )       │  %       │
-            &kp PIPE   &none     &git_status &git_diff  &git_diff_s    &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
+        //│          │          │          │          │          │   │ #        │ ~        │  (       │  )       │  %       │
+            &none      GIT_ADD  &git_status &git_diff  &git_diff_s    &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│   ALL    │ COPY     │   CUP    │          │ PASTE    │   │  !       │ ?        │  [       │  ]       │  ^       │
-              CTRL_A   CTRL_C       CTRL_X     &none    CTRL_V           &kp EXCL  &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
+        //│   ALL    │ COPY     │   CUP    │          │ PASTE    │   │ !        │ ?        │  [       │  ]       │  ^       │
+              CTRL_A   CTRL_C       CTRL_X     &none    CTRL_V         &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
