@@ -140,7 +140,6 @@ name: name##_macro {                      \
 };
 
 
-#define S_SEARH  &kp LS(LC(SHIFT))
 #define Z_SLEEP  &kp LA(LG(C_PWR))
 #define Z_SSAVE  &kp LC(LA(LS(LG(S))))
 #define CTRL_A_MACRO  &kp LC(LA(A))
