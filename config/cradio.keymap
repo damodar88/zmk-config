@@ -94,7 +94,7 @@
             &kp PIPE     &none      &none     &none     &none          &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │ COPY     │   CUP    │          │ PASTE    │   │  !       │ ?        │  [       │  ]       │  ^       │
-            &none      K_COPY       K_CUT    &none      K_PASTE         &kp EXCL  &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
+            &none      &kp K_COPY   &kp  K_CUT &none    &kp  K_PASTE    &kp EXCL  &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
