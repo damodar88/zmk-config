@@ -97,7 +97,7 @@ combo_##name {               \
         COMBO(git_diff_s,   &git_push, 24 9)
         COMBO(git_add,      $git_add, 11 18)
         //Intellj
-        COMBO(search,  &search,  25 20)
+        COMBO(intellij_search,  &intellij_search,  25 20)
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
         COMBO(arr_dn, &kp DARW, 16 17)
@@ -137,7 +137,7 @@ name: name##_macro {                      \
         MACRO(git_status,   &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S)
         MACRO(git_diff_s,   &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp G &kp E &kp D)
         MACRO(git_add,      &kp G &kp I &kp T &kp SPACE &kp A &kp D &kp D SPACE)
-        MACRO(search,       &kp A)
+        MACRO(intellij_search, LS(LC(SHIFT)) &kp LGUI &kp O)
     };
 };
 
@@ -198,7 +198,7 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ 1        │  3       │  5       │  7       │ 9        │   │          │          │ UP       │          │  BSPC    │
-            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9        &search     &none      &kp UARW    &none       &kp BSPC
+            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &none     &none      &kp UARW    &none       &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 2        │  4       │  6       │  8       │ 0        │   │          │ LEFT     │ DOWN     │  RIGHT   │  DEL     │
             &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none      &kp LARW   &kp DARW   &kp RARW   &kp DEL
