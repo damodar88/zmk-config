@@ -216,7 +216,7 @@ name: name##_macro {                      \
             &kp PIPE   &none     &git_status &git_diff  &git_diff_s    &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │ COPY     │   CUP    │          │ PASTE    │   │  !       │ ?        │  [       │  ]       │  ^       │
-            &none      &kp K_COPY   &kp  K_CUT &none    &kp  K_PASTE    &kp EXCL  &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
+         &CTRL_A_MACRO &kp K_COPY   &kp  K_CUT &none    &kp  K_PASTE    &kp EXCL  &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
