@@ -89,7 +89,6 @@ combo_##name {               \
         // Git
         COMBO(git_clone,    &git_clone, 25 5)
         COMBO(git_checkout, &git_checkout, 26 6)
-        COMBO(git_commit,   &git_commit, 27 7)
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
         COMBO(arr_dn, &kp DARW, 16 17)
@@ -122,7 +121,6 @@ name: name##_macro {                      \
         MACRO(dir_up,       &kp DOT &kp DOT &kp FSLH)
         MACRO(git_clone,    &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E)
         MACRO(git_checkout, &kp G &kp I &kp T &kp SPACE &kp C &kp H &kp E &kp C &kp K &kp O &kp U &kp T)
-        MACRO(git_commit,   &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE &kp QUOTE &kp F &kp E &kp A &kp T &kp COLON &kp SPACE &kp QUOTE)
     };
 };
 
@@ -189,7 +187,7 @@ name: name##_macro {                      \
             &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &kp LARW   &kp DARW   &kp RARW    &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  /       │  *       │   │          │          │          │          │          │
-            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK   &git_clone  &git_checkout  &git_commit  &none      &none 
+            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK   &git_clone  &git_checkout  &none     &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none       &none         &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
