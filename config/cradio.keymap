@@ -79,8 +79,8 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ DELETE   │          │          │          │          │   │ $        │ &        │  {       │  }       │ @        │
-            &kp DEL      &none     &none      &none   &kp C_AC_PRINT   &kp DLLR   &kp AMPS   &kp LBRC   &kp RBRC   &kp AT
+        //│ DELETE   │   DELETE │          │          │          │   │ $        │ &        │  {       │  }       │ @        │
+            &kp BSPC     &kp DEL   &none      &none   &kp C_AC_PRINT   &kp DLLR   &kp AMPS   &kp LBRC   &kp RBRC   &kp AT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    |     │          │          │          │          │   │ #        │ ~        │  (       │  )       │  %       │
             &kp PIPE     &none      &none     &none     &none          &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
@@ -97,7 +97,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │  BKS     │ DELETE   │          │          │  RESET   │
-           &sys_reset  &none      &none      &none     &bt BT_SEL 0     BSPC      &kp DEL      &none      &none     &sys_reset
+           &sys_reset  &none      &none      &none     &bt BT_SEL 0               &kp DEL      &none      &none     &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
           &bootloader  &none      &none      &none     &bt BT_SEL 1    &none      &none      &none      &none     &bootloader
