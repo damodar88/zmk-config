@@ -136,7 +136,7 @@ name: name##_macro {                      \
         MACRO(git_diff,     &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F)
         MACRO(git_status,   &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S)
         MACRO(git_diff_s,   &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp G &kp E &kp D)
-        MACRO(git_add,      &kp G &kp I &kp T &kp SPACE &kp A &kp D &kp D SPACE)
+        MACRO(git_add,      &kp G &kp I &kp T &kp SPACE &kp A &kp D &kp D)
         MACRO(intellij_search, LS(LC(SHIFT)) &kp LGUI &kp O)
     };
 };
@@ -217,7 +217,7 @@ name: name##_macro {                      \
          &git_clone &git_checkout &git_branch &git_commit &git_push    &kp DLLR   &kp AMPS   &kp LBRC   &kp RBRC   &kp AT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    |     │ ADD A    │          │          │          │   │ #        │ ~        │  (       │  )       │  %       │
-            &kp PIPE   &git_add  &git_status &git_diff  &git_diff_s    &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
+            &kp PIPE   &none     &git_status &git_diff  &git_diff_s    &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │ COPY     │   CUP    │          │ PASTE    │   │  !       │ ?        │  [       │  ]       │  ^       │
             &none      &kp K_COPY   &kp  K_CUT &none    &kp  K_PASTE    &kp EXCL  &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
