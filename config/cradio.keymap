@@ -136,7 +136,7 @@ name: name##_macro {                      \
         MACRO(git_diff,     &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F)
         MACRO(git_status,   &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S)
         MACRO(git_diff_s,   &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp G &kp E &kp D)
-        MACRO(git_add,      &kp G &kp I &kp T &kp SPACE &kp A &kp D &kp D SPACE MINUS &kp A)
+        MACRO(git_add,      &kp G &kp I &kp T &kp SPACE &kp A &kp D &kp D SPACE)
         MACRO(search,       &kp A)
     };
 };
