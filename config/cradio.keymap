@@ -133,7 +133,7 @@ name: name##_macro {                      \
 #define HT(k1,k2,k3,k4)   &ht LG(V) k1   &ht LG(C) k2  &ht LG(X) k3  &ht LG(Z) k4
 
 #define SYM_TAB  &lt SYM TAB
-#define LCA_ENT  &mt LC(LALT) ENTER
+#define SYM_ENT  &lt SYM ENTER
 #define SPC_NUM  &lt NUM SPACE
 #define NUM_BSP  &lt NUM BSPC
 
@@ -152,7 +152,7 @@ name: name##_macro {                      \
         //│ "        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
             &kp DQT     &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             SYM_TAB    SPC_NUM        LCA_ENT    NUM_BSP
+                                             SYM_TAB    SPC_NUM        SYM_ENT    NUM_BSP
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
