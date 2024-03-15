@@ -137,7 +137,7 @@ name: name##_macro {                      \
     };
 };
 
-#define INTJ_S   &kp LS(LC(SHIFT)) &kp LGUI &kp O
+#define INTJ_S   &kp LS(LGUI) &kp LS(LSHIFT) &kp O
 
 #define Z_SLEEP  &kp LA(LG(C_PWR))
 #define Z_SSAVE  &kp LC(LA(LS(LG(S))))
