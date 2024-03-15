@@ -95,7 +95,6 @@ combo_##name {               \
         COMBO(git_diff,     &git_diff, 12 9)
         COMBO(git_status,   &git_status, 24 9)
         COMBO(git_diff_s,   &git_push, 24 9)
-        COMBO(git_add,      $git_add, 11 18)
         //Intellj
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
@@ -135,7 +134,6 @@ name: name##_macro {                      \
         MACRO(git_diff,     &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F)
         MACRO(git_status,   &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S)
         MACRO(git_diff_s,   &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp G &kp E &kp D)
-        MACRO(git_add,      &kp G &kp I &kp T &kp SPACE &kp A)
     };
 };
 
