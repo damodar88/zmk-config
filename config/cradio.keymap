@@ -92,6 +92,11 @@ combo_##name {               \
         COMBO(git_branch,   &git_branch, 22 7)
         COMBO(git_commit,   &git_commit, 23 8)
         COMBO(git_push,     &git_push, 24 9)
+
+        COMBO(git_diff,     &git_diff, 12 9)
+        COMBO(git_status,   &git_status, 24 9)
+        COMBO(git_diff_s,   &git_push, 24 9)
+
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
         COMBO(arr_dn, &kp DARW, 16 17)
@@ -127,6 +132,9 @@ name: name##_macro {                      \
         MACRO(git_push,     &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp S &kp H &kp SPACE &kp O &kp R &kp I &kp G &kp I &kp N)
         MACRO(git_commit,   &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE)
         MACRO(git_branch,   &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H)
+        MACRO(git_diff,     &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F)
+        MACRO(git_status,   &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S)
+        MACRO(git_diff_s,   &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp G &kp E &kp D)
     };
 };
 
@@ -202,8 +210,8 @@ name: name##_macro {                      \
         SYM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ DELETE   │   DELETE │          │          │          │   │ $        │ &        │  {       │  }       │ @        │
-&git_clone  &git_checkout  &git_branch     &git_commit     &git_push   &kp DLLR   &kp AMPS   &kp LBRC   &kp RBRC   &kp AT
+        //│ CLONE    │ CHECKOUT │          │          │          │   │ $        │ &        │  {       │  }       │ @        │
+         &git_clone &git_checkout &git_branch &git_commit &git_push      &kp DLLR   &kp AMPS   &kp LBRC   &kp RBRC   &kp AT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    |     │  DIR     │          │          │          │   │ #        │ ~        │  (       │  )       │  %       │
             &kp PIPE    &dir_up     &none     &none     &none          &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
