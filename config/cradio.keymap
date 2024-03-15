@@ -134,7 +134,7 @@ name: name##_macro {                      \
 
 #define SYM_TAB  &lt SYM TAB
 #define LCA_ENT  &mt LC(LALT) ENTER
-#define SFT_SPC  &st RSHFT SPACE
+#define SPC_NUM  &lt NUM SPACE
 #define NUM_BSP  &lt NUM BSPC
 
 / {
@@ -152,7 +152,7 @@ name: name##_macro {                      \
         //│ "        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
             &kp DQT     &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             SYM_TAB    SFT_SPC        LCA_ENT    NUM_BSP
+                                             SYM_TAB    SPC_NUM        LCA_ENT    NUM_BSP
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
