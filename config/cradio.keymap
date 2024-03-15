@@ -32,20 +32,6 @@
         };
     };
     
-
-    / {
-    macros {
-        zed_em_kay: zed_em_kay {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z &kp M &kp K>
-                , <&git_clone &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E>
-                ;
-        };
-    };
-};
  
 
     keymap {
@@ -77,7 +63,7 @@
             &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &kp LARW   &kp DARW   &kp RARW    &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  /       │  *       │   │          │          │          │          │          │
-            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK     &git_clone  &none      &none      &none      &none 
+            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK   &kp GIT_CLONE() &none      &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none       &none         &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
