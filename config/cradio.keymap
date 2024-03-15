@@ -194,8 +194,8 @@ name: name##_macro {                      \
         //│ DELETE   │   DELETE │          │          │          │   │ $        │ &        │  {       │  }       │ @        │
             &kp BSPC     &kp DEL   &none      &none   &kp C_AC_PRINT   &kp DLLR   &kp AMPS   &kp LBRC   &kp RBRC   &kp AT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    |     │          │          │          │          │   │ #        │ ~        │  (       │  )       │  %       │
-            &kp PIPE     &none      &none     &none     &none          &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
+        //│    |     │  DIR     │          │          │          │   │ #        │ ~        │  (       │  )       │  %       │
+            &kp PIPE    &dir_up     &none     &none     &none          &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │ COPY     │   CUP    │          │ PASTE    │   │  !       │ ?        │  [       │  ]       │  ^       │
             &none      &kp K_COPY   &kp  K_CUT &none    &kp  K_PASTE    &kp EXCL  &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
