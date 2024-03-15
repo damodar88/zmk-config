@@ -7,7 +7,7 @@
 
 / {
     macros {
-        MACRO(git_clone, &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E)
+        MACRO(git_clone, &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E);
     };
 };
 
