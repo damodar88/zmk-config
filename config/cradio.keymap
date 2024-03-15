@@ -199,7 +199,7 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ 1        │  3       │  5       │  7       │ 9        │   │          │          │ UP       │          │  BSPC    │
-            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         INTJ_S      &none     &kp UARW    &none      &kp BSPC
+            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9          &none      &none     &kp UARW    &none      &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 2        │  4       │  6       │  8       │ 0        │   │          │ LEFT     │ DOWN     │  RIGHT   │  DEL     │
             &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none      &kp LARW   &kp DARW   &kp RARW   &kp DEL
