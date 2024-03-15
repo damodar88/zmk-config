@@ -63,7 +63,7 @@
             &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &kp LARW   &kp DARW   &kp RARW    &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  /       │  *       │   │          │          │          │          │          │
-            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK   &kp GIT_CLONE() &none      &none      &none      &none 
+            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK     GIT_CLONE() &none      &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none       &none         &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
