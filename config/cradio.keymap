@@ -116,6 +116,11 @@ name: name##_macro {                      \
         MACRO(vim_q,  &kp COLON &kp Q &kp EXCL)
         MACRO(vim_s,  &kp COLON &kp X)
         MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
+        MACRO(git_clone, &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E)
+        MACRO(git_checkout, &kp G &kp I &kp T &kp SPACE &kp C &kp H &kp E &kp C &kp K &kp O &kp U &kp T)
+        MACRO(git_commit, &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE &kp QUOTE &kp F &kp E &kp A &kp T &kp COLON &kp SPACE &kp QUOTE)
+        MACRO(git_push, &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp S &kp H &kp SPACE &kp O &kp R &kp I &kp G &kp I &kp N)
+        MACRO(git_branch, &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp SPACE &kp F &kp E &kp A &kp T &kp U &kp R &kp E)
     };
 };
 
@@ -182,7 +187,7 @@ name: name##_macro {                      \
             &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &kp LARW   &kp DARW   &kp RARW    &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  /       │  *       │   │          │          │          │          │          │
-            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK      &none      &none      &none      &none      &none 
+            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK   &git_clone  &git_checkout  &git_commit  &git_push &git_branch 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none       &none         &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
