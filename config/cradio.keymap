@@ -86,6 +86,11 @@ combo_##name {               \
         COMBO(vim_q,  &vim_q,   0  1)
         COMBO(vim_s,  &vim_s,  20 21)
         COMBO(dir_up, &dir_up, 28 29)
+        COMBO(git_clone)
+        COMBO(git_checkout)
+        COMBO(git_commit)
+        COMBO(git_push)
+        COMBO(git_branch)
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
         COMBO(arr_dn, &kp DARW, 16 17)
