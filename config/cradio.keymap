@@ -169,7 +169,7 @@ name: name##_macro {                      \
         //│ "        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
             &kp DQT     &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LCTRL  SPC_NUM        SYM_ENT    &kp LWIN
+                                          &lt CMK BSPC   SPC_NUM        SYM_ENT    &kp LWIN
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
