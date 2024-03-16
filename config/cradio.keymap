@@ -216,7 +216,7 @@ name: name##_macro {                      \
          &git_clone &git_checkout &git_branch &git_diff &git_diff_s    &kp DLLR   &kp AMPS   &kp LBRC   &kp RBRC   &kp AT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │ #        │ ~        │  (       │  )       │  %       │
-           &git_status &git_add  &git_commit  &git_push  &none         &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
+           &git_status &git_add  &git_commit  &git_push  &git_log      &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│   ALL    │ COPY     │   CUP    │          │ PASTE    │   │ !        │ ?        │  [       │  ]       │  ^       │
               &none    &none        &none     &none     &none          &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
