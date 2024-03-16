@@ -98,7 +98,7 @@ combo_##name {               \
         COMBO(git_add,      &git_add, 10 9)
         COMBO(git_log,      &git_log, 14 9)
         //Intellj
-        COMBO(SEARCH,       &SEARCH 6 6)
+        COMBO(SEARCH,       &SEARCH 5 6)
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
         COMBO(arr_dn, &kp DARW, 16 17)
@@ -139,7 +139,7 @@ name: name##_macro {                      \
         MACRO(git_diff_s,   &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp G &kp E &kp D)
         MACRO(git_add,      &kp G &kp I &kp T &kp SPACE &kp A &kp D &kp D &kp SPACE &kp MINUS &kp A)
         MACRO(git_log,      &kp G &kp I &kp T &kp SPACE &kp L &kp O &kp G &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp T)
-        MACRO(SEARCH,       &kp LS(LGUI), &kp SHIFT, &kp F)
+        MACRO(SEARCH,       &kp LGUI(LS), &kp SHIFT, &kp F)
     };
 };
 
