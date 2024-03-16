@@ -141,7 +141,7 @@ name: name##_macro {                      \
 
 #define Z_SLEEP  &kp LA(LG(C_PWR))
 #define Z_SSAVE  &kp LC(LA(LS(LG(S))))
-#define CTRL_A   &kp LC(LA(A))
+#define CTRL_A   &kp LC(LA(LS(LG(A))))
 #define CTRL_V   &kp LCTRL &kp V
 #define CTRL_C   &kp LCTRL &kp C
 #define CTRL_X   &kp LCTRL &kp X
