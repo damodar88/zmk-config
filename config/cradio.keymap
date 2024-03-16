@@ -98,6 +98,7 @@ combo_##name {               \
         COMBO(git_add,      &git_add, 10 9)
         COMBO(git_log,      &git_log, 14 9)
         //Intellj
+        COMBO(SEARCH,       &SEARCH 6 6)
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
         COMBO(arr_dn, &kp DARW, 16 17)
