@@ -221,7 +221,7 @@ name: name##_macro {                      \
             &none      &none     &git_status &git_diff  &git_diff_s    &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│   ALL    │ COPY     │   CUP    │          │ PASTE    │   │ !        │ ?        │  [       │  ]       │  ^       │
-              CTRL_A   CTRL_C       CTRL_X     &none    CTRL_V         &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
+              &none    &none        &none     &none     &none          &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
