@@ -132,7 +132,7 @@ name: name##_macro {                      \
         MACRO(git_checkout, &kp G &kp I &kp T &kp SPACE &kp C &kp H &kp E &kp C &kp K &kp O &kp U &kp T &kp SPACE)
         MACRO(git_push,     &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp S &kp H &kp SPACE &kp O &kp R &kp I &kp G &kp I &kp N &kp SPACE)
         MACRO(git_commit,   &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE)
-        MACRO(git_branch,   &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp SPACE)
+        MACRO(git_branch,   &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp SPACE &kp F &kp E &kp A &kp T &kp U &kp R &kp E &kp SLASH)
         MACRO(git_diff,     &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F)
         MACRO(git_status,   &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S)
         MACRO(git_diff_s,   &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp G &kp E &kp D)
