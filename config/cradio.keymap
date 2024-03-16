@@ -95,6 +95,7 @@ combo_##name {               \
         COMBO(git_diff,     &git_diff, 12 9)
         COMBO(git_status,   &git_status, 24 9)
         COMBO(git_diff_s,   &git_push, 24 9)
+        COMBO(git_add,      &git_add, 10 9)
         //Intellj
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
