@@ -139,7 +139,7 @@ name: name##_macro {                      \
         MACRO(git_diff_s,   &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp G &kp E &kp D)
         MACRO(git_add,      &kp G &kp I &kp T &kp SPACE &kp A &kp D &kp D &kp SPACE &kp MINUS &kp A)
         MACRO(git_log,      &kp G &kp I &kp T &kp SPACE &kp L &kp O &kp G &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp T)
-        MACRO(SEARCH,       &kp LC(LA(O)))
+        MACRO(SEARCH,       &kp L)
     };
 };
 
@@ -199,7 +199,7 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ 1        │  3       │  5       │  7       │ 9        │   │          │          │ UP       │          │  BSPC    │
-            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9          &SEARCH    &none     &kp UARW    &none      &kp BSPC
+            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9          &none    &none     &kp UARW    &none      &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 2        │  4       │  6       │  8       │ 0        │   │          │ LEFT     │ DOWN     │  RIGHT   │  DEL     │
             &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none      &kp LARW   &kp DARW   &kp RARW   &kp DEL
@@ -221,7 +221,7 @@ name: name##_macro {                      \
            &git_status &git_add  &git_commit  &git_push  &git_log      &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│   ALL    │ COPY     │   CUP    │          │ PASTE    │   │ !        │ ?        │  [       │  ]       │  ^       │
-              &none    &kp LC(C)    &none     &none     &none          &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
+              &none    &kp LC(C)    &none     &none     &kp LC(v)      &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
