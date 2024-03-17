@@ -178,12 +178,12 @@ name: name##_macro {                      \
 #define ________ &trans
 #define BT(n)    BT_SEL n
 
-#define HRML(k1,k2,k3,k4) &lmt LCTRL k1  &lmt LALT k2  &lmt LGUI k3  &lst LSHFT k4
+#define HRML(k1,k2,k3,k4) &lmt LSHFT k1  &lmt LALT k2  &lmt LGUI k3  &lst LCTRL k4
 #define HRMR(k1,k2,k3,k4) &rst RSHFT k1  &rmt RGUI k2  &rmt RALT k3  &rmt RCTRL k4
 #define HT(k1,k2,k3,k4)   &ht LG(V) k1   &ht LG(C) k2  &ht LG(X) k3  &ht LG(Z) k4
 
 #define SYM_TAB  &lt SYM TAB
-#define SYM_ENT  &lt SYM ENTER
+#define SYM_ENT  &lt CMK ENTER
 #define SPC_NUM  &lt NUM SPACE
 #define NUM_BSP  &lt NUM BSPC
 
@@ -202,7 +202,7 @@ name: name##_macro {                      \
         //│ "        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
             &kp APOS    &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &lt FNC BSPC   SPC_NUM        SYM_ENT    &lt CMK DEL
+                                         &mt RWIN DEL   SPC_NUM        SYM_ENT    &lt SYM BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
