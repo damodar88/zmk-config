@@ -94,9 +94,10 @@ combo_##name {               \
         COMBO(git_push,     &git_push, 24 9)
         COMBO(git_diff,     &git_diff, 12 9)
         COMBO(git_status,   &git_status, 24 9)
-        COMBO(git_diff_s,   &git_push, 24 9)
+        COMBO(git_diff_s,   &git_diff_s, 24 9)
         COMBO(git_add,      &git_add, 10 9)
         COMBO(git_log,      &git_log, 14 9)
+        COMBO(git_pull,     &git_pull)
         //Intellj
         COMBO(search,       &search, 5 6)
         COMBO(search_c,     &search_c, 5 6)
@@ -147,12 +148,13 @@ name: name##_macro {                      \
         MACRO(git_checkout, &kp G &kp I &kp T &kp SPACE &kp C &kp H &kp E &kp C &kp K &kp O &kp U &kp T &kp SPACE)
         MACRO(git_push,     &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp S &kp H &kp SPACE &kp O &kp R &kp I &kp G &kp I &kp N &kp SPACE)
         MACRO(git_commit,   &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE)
-        MACRO(git_branch,   &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp SPACE &kp F &kp E &kp A &kp T &kp U &kp R &kp E &kp SLASH)
+        MACRO(git_branch,   &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp SPACE &kp F &kp E &kp A &kp T &kp U &kp R &kp E &kp SPACE)
         MACRO(git_diff,     &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F)
         MACRO(git_status,   &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S)
         MACRO(git_diff_s,   &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp G &kp E &kp D)
         MACRO(git_add,      &kp G &kp I &kp T &kp SPACE &kp A &kp D &kp D &kp SPACE &kp MINUS &kp A)
         MACRO(git_log,      &kp G &kp I &kp T &kp SPACE &kp L &kp O &kp G &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp T)
+        MACRO(git_pull,     &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp L &kp L &kp SPACE &kp O &kp R &kp I &kp G &kp I &kp N &kp SPACE)
         MACRO(search,       &kp LG(LS (F)))
         MACRO(search_c,     &kp LG(LS (O)))
         MACRO(junit_all,    &kp LC(LS (R)))
@@ -202,7 +204,7 @@ name: name##_macro {                      \
         //│ "        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
             &kp APOS    &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &mt NUM DEL  SPC_NUM        SYM_ENT    &lt CMK BSPC
+                                           &mt FNC DEL  SPC_NUM        SYM_ENT    &lt CMK BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
