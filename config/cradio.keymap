@@ -104,7 +104,8 @@ combo_##name {               \
         COMBO(refactor,     &refactor, 25 26)
         COMBO(duplicate,    &duplicate, 26 27)
         //Linux
-        COMBO(ls,    &ls, 9 19)
+        COMBO(ls,           &ls, 9 19)
+        COMBO(pwd,          &pwd, 3 4)
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
         COMBO(arr_dn, &kp DARW, 16 17)
@@ -151,6 +152,7 @@ name: name##_macro {                      \
         MACRO(refactor,     &kp LS(F6))
         MACRO(duplicate,    &kp LG(D))
         MACRO(ls,           &kp L &kp S)
+        MACRO(pwd,          &kp P &kp W &kp D)
     };
 };
 
@@ -193,14 +195,14 @@ name: name##_macro {                      \
         CMK_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &none       &none      &none      &none     &none          &none      &none      &none      &none      &ls
+        //│          │          │          │  PWD     │          │   │          │          │          │          │          │
+            &none       &none      &none      &pwd       &none          &none      &none      &none      &none      &ls
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    |     │  DIR     │          │          │          │   │          │          │          │          │          │
-            &kp PIPE    &dir_up     &none      &none      &none        &none      &none      &none      &none      &none
+            &kp PIPE    &dir_up     &none     &none      &none          &none      &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none 
+            &none       &none       &none     &none      &none          &none      &none      &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none       &none         &none      &none 
         // 
