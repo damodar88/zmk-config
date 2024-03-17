@@ -183,8 +183,8 @@ name: name##_macro {                      \
 #define HT(k1,k2,k3,k4)   &ht LG(V) k1   &ht LG(C) k2  &ht LG(X) k3  &ht LG(Z) k4
 
 #define SYM_TAB  &lt SYM TAB
-#define SYM_ENT  &lt CMK ENTER
-#define SPC_NUM  &lt NUM SPACE
+#define SYM_ENT  &lt SYM ENTER
+#define SPC_NUM  &lt FNC SPACE
 #define NUM_BSP  &lt NUM BSPC
 
 / {
@@ -202,7 +202,7 @@ name: name##_macro {                      \
         //│ "        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
             &kp APOS    &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                         &mt RWIN DEL   SPC_NUM        SYM_ENT    &lt SYM BSPC
+                                           &mt NUM DEL  SPC_NUM        SYM_ENT    &lt CMK BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -232,7 +232,7 @@ name: name##_macro {                      \
             &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  /       │  *       │   │          │          │          │          │          │
-            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK     &none       &none      &none      &none      &none 
+            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp CARET   &none         &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -247,7 +247,7 @@ name: name##_macro {                      \
         //│          │          │          │          │          │   │ #        │ -        │  (       │  )       │  %       │
            &git_status &git_add  &git_commit  &git_push  &git_log      &kp HASH   &kp MINUS   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│   ALL    │ COPY     │   CUP    │          │ PASTE    │   │ !        │ ?        │  [       │  ]       │  ;       │
+        //│          │          │          │          │ PASTE    │   │ !        │ ?        │  [       │  ]       │  ;       │
           &kp LG(A)    &kp LG(C)    &kp LG(X)  &none    &kp LG(V)      &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp SEMI 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none      &none          &none      &none 
@@ -257,14 +257,14 @@ name: name##_macro {                      \
         FNC_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │ COLEMAK  │
-           &sys_reset  ________   ________   ________  &bt BT(0)     &out OUT_BLE ________   ________   ________   &tog CMK
+        //│          │          │          │                     │   │          │          │          │          │          │
+            &none       &none      &none      &none      &none         &none       &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  ________   ________   ________  &bt BT(1)     &out OUT_USB ________   ________   ________  &bootloader
+        //           |          │          │          │          │   │          │          │          │          │          |
+            &none       &none      &none      &none      &none         &none       &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ SLEEP    │          │          │CLEAR PROF│PROFILE 2 │   │          │          │          │          │ SSAVE    │
-            Z_SLEEP    ________   ________  &bt BT_CLR &bt BT(2)       &kp GLOBE  ________   ________   ________   Z_SSAVE
+        //│ ALL      │  COPY    │  CUP     │CLEAR PROF│ PASTE    |   │          │          │          │          │          │
+           &kp LG(A)   &kp LG(C)  &kp LG(X)  &none      &kp LG(V)      &none       &none      &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              ________   ________       ________   ________
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
