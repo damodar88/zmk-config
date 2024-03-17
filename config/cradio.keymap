@@ -107,6 +107,12 @@ combo_##name {               \
         COMBO(ls,           &ls, 9 19)
         COMBO(pwd,          &pwd, 3 4)
         COMBO(mkdir,        &mkdir, 3 4)
+        COMBO(touch,        &touch, 9 19)
+        COMBO(rm_rf,        &rm_rf, 9 19)
+        COMBO(grep,         &grep, 9 19)
+        COMBO(cat,          &cat, 9 19)
+        COMBO(tail_n,       &tail_n, 9 19)
+
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
         COMBO(arr_dn, &kp DARW, 16 17)
@@ -152,9 +158,14 @@ name: name##_macro {                      \
         MACRO(junit_all,    &kp LC(LS (R)))
         MACRO(refactor,     &kp LS(F6))
         MACRO(duplicate,    &kp LG(D))
-        MACRO(ls, &kp L &kp S &kp SPACE &kp MINUS &kp MINUS &kp C &kp O &kp L &kp O &kp R &kp EQUAL &kp A &kp U &kp T &kp O)
+        MACRO(ls,           &kp L &kp S &kp SPACE &kp MINUS &kp MINUS &kp C &kp O &kp L &kp O &kp R &kp EQUAL &kp A &kp U &kp T &kp O)
         MACRO(pwd,          &kp P &kp W &kp D)
         MACRO(mkdir,        &kp M &kp K &kp D &kp I &kp R)
+        MACRO(touch,        &kp T &kp O &kp U &kp C &kp H)
+        MACRO(rm_rf,        &kp R &kp M &kp SPACE &kp MINUS &kp R &kp MINUS &kp F)
+        MACRO(grep,         &kp G &kp R &kp E &kp P)
+        MACRO(cat,          &kp C &kp A &kp T)
+        MACRO(tail_n,       &kp T &kp A &kp I &kp L &kp SPACE &kp MINUS &kp N)
 
     };
 };
