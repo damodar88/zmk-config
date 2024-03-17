@@ -106,6 +106,7 @@ combo_##name {               \
         //Linux
         COMBO(ls,           &ls, 9 19)
         COMBO(pwd,          &pwd, 3 4)
+        COMBO(mkdir,        &mkdir, 3 4)
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
         COMBO(arr_dn, &kp DARW, 16 17)
@@ -151,8 +152,10 @@ name: name##_macro {                      \
         MACRO(junit_all,    &kp LC(LS (R)))
         MACRO(refactor,     &kp LS(F6))
         MACRO(duplicate,    &kp LG(D))
-        MACRO(ls,           &kp L &kp S)
+        MACRO(ls, &kp L &kp S &kp SPACE &kp MINUS &kp MINUS &kp C &kp O &kp L &kp O &kp R &kp EQUAL &kp A &kp U &kp T &kp O)
         MACRO(pwd,          &kp P &kp W &kp D)
+        MACRO(mkdir,        &kp M &kp K &kp D &kp I &kp R)
+
     };
 };
 
@@ -195,11 +198,11 @@ name: name##_macro {                      \
         CMK_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │  PWD     │          │   │          │          │          │          │          │
-            &none       &none      &none      &pwd       &none          &none      &none      &none      &none      &ls
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &mkdir      &none      &none      &none     &none          &none      &none      &none      &none      &ls
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    |     │  DIR     │          │          │          │   │          │          │          │          │          │
-            &kp PIPE    &dir_up     &none     &none      &none          &none      &none      &none      &none      &none
+        //│    |     │  DIR     │   PWD    │          │          │   │          │          │          │          │          │
+            &kp PIPE    &dir_up     &pwd      &none     &none          &none      &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &none       &none       &none     &none      &none          &none      &none      &none      &none      &none 
