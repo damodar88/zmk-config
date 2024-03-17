@@ -160,12 +160,12 @@ name: name##_macro {                      \
         MACRO(duplicate,    &kp LG(D))
         MACRO(ls,           &kp L &kp S &kp SPACE &kp MINUS &kp MINUS &kp C &kp O &kp L &kp O &kp R &kp EQUAL &kp A &kp U &kp T &kp O)
         MACRO(pwd,          &kp P &kp W &kp D)
-        MACRO(mkdir,        &kp M &kp K &kp D &kp I &kp R)
-        MACRO(touch,        &kp T &kp O &kp U &kp C &kp H)
-        MACRO(rm_rf,        &kp R &kp M &kp SPACE &kp MINUS &kp R &kp MINUS &kp F)
-        MACRO(grep,         &kp G &kp R &kp E &kp P)
-        MACRO(cat,          &kp C &kp A &kp T)
-        MACRO(tail_n,       &kp T &kp A &kp I &kp L &kp SPACE &kp MINUS &kp N)
+        MACRO(mkdir,        &kp M &kp K &kp D &kp I &kp R &kp SPACE)
+        MACRO(touch,        &kp T &kp O &kp U &kp C &kp H &kp SPACE)
+        MACRO(rm_rf,        &kp R &kp M &kp SPACE &kp MINUS &kp R &kp MINUS &kp F &kp SPACE)
+        MACRO(grep,         &kp G &kp R &kp E &kp P &kp SPACE)
+        MACRO(cat,          &kp C &kp A &kp T &kp SPACE)
+        MACRO(tail_n,       &kp T &kp A &kp I &kp L &kp SPACE &kp MINUS &kp N &kp SPACE)
 
     };
 };
