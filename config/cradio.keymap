@@ -213,10 +213,10 @@ name: name##_macro {                      \
             &mkdir      &rm_rf      &none     &grep      &touch         &search   &search_c   &kp UARW    &none     &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ |        │  DIR     │   PWD    │          │          │   │          │          │          │          │          │
-            &kp PIPE    &dir_up     &pwd      &cat       &tail_n        &refactor  &kp LARW   &kp DARW   &kp RARW   &none
+            &kp PIPE    &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW   &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ~        │          │          │          │          │   │          │          │          │          │          │
-            &kp TILDE    &none      &none      &none      &none          &junit_all  &duplicate  &none      &none      &none  
+            &kp TILDE   &none      &none      &none      &none        &junit_all  &duplicate  &none      &none      &none  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none       &none         &none      &none
         // 
