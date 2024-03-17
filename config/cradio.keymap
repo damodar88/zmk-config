@@ -249,7 +249,7 @@ name: name##_macro {                      \
         //│          │          │          │          │          │   │ #        │ -        │  (       │  )       │  %       │
            &git_status &git_add  &git_commit  &git_push  &git_log      &kp HASH   &kp MINUS   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │ PASTE    │   │ !        │ ?        │  [       │  ]       │  ;       │
+        //│          │          │          │          │          │   │ !        │ ?        │  [       │  ]       │  ;       │
            &git_pull   &none      &none      &none      &none          &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp SEMI 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none      &none          &none      &none 
