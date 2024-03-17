@@ -184,7 +184,7 @@ name: name##_macro {                      \
 
 #define SYM_TAB  &lt SYM TAB
 #define SYM_ENT  &lt SYM ENTER
-#define SPC_NUM  &lt FNC SPACE
+#define SPC_NUM  &lt NUM SPACE
 #define NUM_BSP  &lt NUM BSPC
 
 / {
@@ -232,7 +232,7 @@ name: name##_macro {                      \
             &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  /       │  *       │   │          │          │          │          │          │
-            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK     
+            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK     &none       &none      &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp CARET   &none         &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
