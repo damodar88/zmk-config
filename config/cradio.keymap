@@ -97,7 +97,7 @@ combo_##name {               \
         COMBO(git_diff_s,   &git_diff_s, 24 9)
         COMBO(git_add,      &git_add, 10 9)
         COMBO(git_log,      &git_log, 14 9)
-        COMBO(git_pull,     &git_pull)
+        COMBO(git_pull,     &git_pull, 20 21)
         //Intellj
         COMBO(search,       &search, 5 6)
         COMBO(search_c,     &search_c, 5 6)
