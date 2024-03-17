@@ -200,9 +200,9 @@ name: name##_macro {                      \
             HRML(A,        O,        E,         U)       &kp I          &kp D      HRMR(H,    T,         N,         S)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ "        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
-            &kp DQT     &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
+            &kp APOS    &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &lt CMK BSPC   SPC_NUM        SYM_ENT    &kp LWIN
+                                          &lt FNC BSPC   SPC_NUM        SYM_ENT    &lt CMK DEL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -210,31 +210,31 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &mkdir      &rm_rf      &none     &grep      &touch         &none      &none      &none      &none      &ls
+            &mkdir      &rm_rf      &none     &grep      &touch         &search   &search_c   &kp UARW    &none     &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    |     │  DIR     │   PWD    │          │          │   │          │          │          │          │          │
-            &kp PIPE    &dir_up     &pwd      &cat       &tail_n        &none      &none      &none      &none      &none
+        //│ |        │  DIR     │   PWD    │          │          │   │          │          │          │          │          │
+            &kp PIPE    &dir_up     &pwd      &cat       &tail_n        &refactor  &kp LARW   &kp DARW   &kp RARW   &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &none       &none      &none      &none      &none          &none      &none      &none      &none      &none 
+        //│ ~        │          │          │          │          │   │          │          │          │          │          │
+            &kp TILDE    &none      &none      &none      &none          &junit_all  &duplicate  &none      &none      &none  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &none       &none         &none      &kp DEL 
+                                              &none       &none         &none      &none
         // 
             >;
         };
         NUM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ 1        │  3       │  5       │  7       │ 9        │   │          │          │ UP       │          │  BSPC    │
-            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &search   &search_c   &kp UARW    &none      &kp BSPC
+        //│ 1        │  3       │  5       │  7       │ 9        │   │          │          │          │          │          │
+            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &none       &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ 2        │  4       │  6       │  8       │ 0        │   │          │ LEFT     │ DOWN     │  RIGHT   │          │
-            &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &refactor  &kp LARW   &kp DARW   &kp RARW   &none
+        //│ 2        │  4       │  6       │  8       │ 0        │   │          │          │          │          │          │
+            &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  /       │  *       │   │          │          │          │          │          │
-            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK    &junit_all  &duplicate  &none      &none      &none 
+            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK     &none       &none      &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &none       &none         &none      &none
+                                             &kp CARET   &none         &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -244,11 +244,11 @@ name: name##_macro {                      \
         //│ CLONE    │ CHECKOUT │          │          │          │   │ $        │ &        │  {       │  }       │ @        │
          &git_clone &git_checkout &git_branch &git_diff &git_diff_s    &kp DLLR   &kp AMPS   &kp LBRC   &kp RBRC   &kp AT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │ #        │ ~        │  (       │  )       │  %       │
-           &git_status &git_add  &git_commit  &git_push  &git_log      &kp HASH   &kp TILDE   &kp LPAR   &kp RPAR   &kp PRCNT
+        //│          │          │          │          │          │   │ #        │ -        │  (       │  )       │  %       │
+           &git_status &git_add  &git_commit  &git_push  &git_log      &kp HASH   &kp MINUS   &kp LPAR   &kp RPAR   &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│   ALL    │ COPY     │   CUP    │          │ PASTE    │   │ !        │ ?        │  [       │  ]       │  ^       │
-          &kp LG(A)    &kp LG(C)    &kp LG(X)  &none    &kp LG(V)      &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp CARET
+        //│   ALL    │ COPY     │   CUP    │          │ PASTE    │   │ !        │ ?        │  [       │  ]       │  ;       │
+          &kp LG(A)    &kp LG(C)    &kp LG(X)  &none    &kp LG(V)      &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp SEMI 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
