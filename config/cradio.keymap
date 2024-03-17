@@ -103,6 +103,8 @@ combo_##name {               \
         COMBO(junit_all,    &junit_all, 15 16)
         COMBO(refactor,     &refactor, 25 26)
         COMBO(duplicate,    &duplicate, 26 27)
+        //Linux
+        COMBO(ls,    &ls, 9 19)
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
         COMBO(arr_dn, &kp DARW, 16 17)
@@ -148,6 +150,7 @@ name: name##_macro {                      \
         MACRO(junit_all,    &kp LC(LS (R)))
         MACRO(refactor,     &kp LS(F6))
         MACRO(duplicate,    &kp LG(D))
+         MACRO(ls,          &kp l &kp s)
     };
 };
 
@@ -191,7 +194,7 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &none       &none      &none      &none     &none          &none      &none      &none      &none      &none
+            &none       &none      &none      &none     &none          &none      &none      &none      &none      &ls
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    |     │  DIR     │          │          │          │   │          │          │          │          │          │
             &kp PIPE    &dir_up     &none      &none      &none        &none      &none      &none      &none      &none
