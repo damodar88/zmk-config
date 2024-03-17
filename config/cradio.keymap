@@ -150,7 +150,7 @@ name: name##_macro {                      \
         MACRO(junit_all,    &kp LC(LS (R)))
         MACRO(refactor,     &kp LS(F6))
         MACRO(duplicate,    &kp LG(D))
-         MACRO(ls,          &kp l &kp s)
+        MACRO(ls,           &kp L &kp S)
     };
 };
 
