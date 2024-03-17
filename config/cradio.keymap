@@ -102,6 +102,7 @@ combo_##name {               \
         COMBO(search_c,     &search_c, 5 6)
         COMBO(junit_all,    &junit_all, 15 16)
         COMBO(refactor,     &refactor, 25 26)
+        COMBO(duplicate,    &duplicate, 26 27)
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
         COMBO(arr_dn, &kp DARW, 16 17)
@@ -145,7 +146,8 @@ name: name##_macro {                      \
         MACRO(search,       &kp LG(LS (F)))
         MACRO(search_c,     &kp LG(LS (O)))
         MACRO(junit_all,    &kp LC(LS (R)))
-        MACRO(refactor,     &kp LS (F6))
+        MACRO(refactor,     &kp LS(F6))
+        MACRO(duplicate,    &kp LG(D))
     };
 };
 
@@ -211,7 +213,7 @@ name: name##_macro {                      \
             &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &refactor  &kp LARW   &kp DARW   &kp RARW   &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  /       │  *       │   │          │          │          │          │          │
-            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK     &none      &junit_all   &none      &none      &none 
+            &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK    &junit_all  &duplicate  &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none       &none         &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
