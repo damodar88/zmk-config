@@ -210,15 +210,15 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &mkdir      &none      &none      &none     &none          &none      &none      &none      &none      &ls
+            &mkdir      &rm_rf      &none     &grep      &touch         &none      &none      &none      &none      &ls
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    |     │  DIR     │   PWD    │          │          │   │          │          │          │          │          │
-            &kp PIPE    &dir_up     &pwd      &none     &none          &none      &none      &none      &none      &none
+            &kp PIPE    &dir_up     &pwd      &cat       &tail_n        &none      &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &none       &none       &none     &none      &none          &none      &none      &none      &none      &none 
+            &none       &none      &none      &none      &none          &none      &none      &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &none       &none         &none      &none 
+                                              &none       &none         &none      &none 
         // 
             >;
         };
