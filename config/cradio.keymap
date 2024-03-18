@@ -147,7 +147,7 @@ name: name##_macro {                      \
         MACRO(git_clone,    &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E &kp SPACE)
         MACRO(git_checkout, &kp G &kp I &kp T &kp SPACE &kp C &kp H &kp E &kp C &kp K &kp O &kp U &kp T &kp SPACE)
         MACRO(git_push,     &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp S &kp H &kp SPACE &kp O &kp R &kp I &kp G &kp I &kp N &kp SPACE)
-        MACRO(git_commit,   &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE &kp APOS &kp f &kp e &kp a &kp t &kp COLON)
+        MACRO(git_commit,   &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE &kp APOS)
         MACRO(git_branch,   &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp SPACE &kp F &kp E &kp A &kp T &kp U &kp R &kp E &kp SPACE)
         MACRO(git_diff,     &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F)
         MACRO(git_status,   &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S)
