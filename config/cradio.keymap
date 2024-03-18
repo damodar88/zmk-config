@@ -180,8 +180,8 @@ name: name##_macro {                      \
 #define ________ &trans
 #define BT(n)    BT_SEL n
 
-#define HRML(k1,k2,k3,k4) &lmt LSHFT k1  &lmt LALT k2  &lmt LGUI k3  &lst LCTRL k4
-#define HRMR(k1,k2,k3,k4) &rst RSHFT k1  &rmt RGUI k2  &rmt RALT k3  &rmt RCTRL k4
+#define HRML(k1,k2,k3,k4) &lmt LSHFT k1  &lmt LALT k2  &lmt LCTRL k3  &lst LGUI k4
+#define HRMR(k1,k2,k3,k4) &rst  RGUI k1  &rmt RCTRL k2  &rmt RALT k3  &rmt RSHFT k4
 #define HT(k1,k2,k3,k4)   &ht LG(V) k1   &ht LG(C) k2  &ht LG(X) k3  &ht LG(Z) k4
 
 #define SYM_TAB  &lt SYM TAB
