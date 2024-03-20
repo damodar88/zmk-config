@@ -1,0 +1,8 @@
+Claro, descompondré la secuencia `#define B LG(LS(F))` para explicar qué hace cada parte:
+
+- `B`: Este es el nombre que se le da a la tecla definida.
+- `LG`: Esto representa la tecla "gui" izquierda (LGUI). La tecla "gui", también conocida como tecla de Windows o tecla de comando en macOS, se utiliza para abrir el menú de inicio en Windows o el lanzador de aplicaciones en macOS.
+- `LS`: Esto activa el modificador "shift" izquierdo (LSHFT). La tecla "shift" se utiliza para cambiar entre mayúsculas y minúsculas o para acceder a caracteres especiales en combinación con otras teclas.
+- `F`: Esto representa la tecla "F". La tecla "F" es una tecla alfabética que se encuentra en los teclados estándar y se utiliza para acceder al carácter "F".
+
+Entonces, en resumen, la secuencia `#define B LG(LS(F))` define una tecla llamada "B" que activa simultáneamente los modificadores "gui" izquierdo y "shift" izquierdo y presiona la tecla "F". Esto simula la combinación de teclas Command (o Windows) + Shift + F en un teclado físico en el contexto de ZMK.
