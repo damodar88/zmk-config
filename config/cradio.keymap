@@ -82,6 +82,7 @@ combo_##name {               \
         COMBO(numb,   &tog NUM,     25 26 33)
         COMBO(vol_up, &kp C_VOL_UP,  9 19)
         COMBO(vol_dn, &kp C_VOL_DN, 19 29)
+        COMBO(screan, &screan, 3 4)
         // invoke macros
         COMBO(vim_q,  &vim_q,   0  1)
         COMBO(vim_s,  &vim_s,  20 21)
@@ -170,6 +171,7 @@ name: name##_macro {                      \
         MACRO(cat,          &kp C &kp A &kp T &kp SPACE)
         MACRO(tail_n,       &kp T &kp A &kp I &kp L &kp SPACE &kp MINUS &kp N &kp SPACE)
         MACRO(cd,           &kp C &kp D &kp SPACE)
+        MACRO(screan,       &kp LG(LS(N3)))
     };
 };
 
@@ -261,7 +263,7 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│    ;     │    :     │          │                     │   │          │          │          │          │          │
-            &kp SEMI  &kp COLON    &none       &none    &kp PSCRN      &kp K_VOL_UP  &none      &none      &none      &none 
+            &kp SEMI  &kp COLON    &none       &none    &screan       &kp K_VOL_UP  &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         // |         | ~        │    ^     │  /       │ \        │   │          │          │          │          │          |
            &kp PIPE    &kp TILDE  &kp CARET   &kp FSLH  &kp BSLH      &kp K_MUTE    &none      &none      &none      &none 
