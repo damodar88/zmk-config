@@ -261,13 +261,13 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│    ;     │          │          │                     │   │          │          │          │          │          │
-            &kp SEMI     &none    &none       &none    &kp PSCRN        &none       &none      &none      &none      &none 
+            &kp SEMI     &none    &none       &none    &kp PSCRN      &kp K_VOL_UP  &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         // |         | ~        │          │  /       │ \        │   │          │          │          │          │          |
-           &kp PIPE    &kp TILDE  &kp CARET   &kp FSLH  &kp BSLH        &none       &none      &none      &none      &none 
+           &kp PIPE    &kp TILDE  &kp CARET   &kp FSLH  &kp BSLH      &kp K_MUTE    &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  %       │  *       │   │          │          │          │          │          │
-           &kp EQUAL   &kp PLUS   &kp MINUS  &kp PRCNT   &kp ASTRK       &none       &none      &none      &none      &none 
+           &kp EQUAL   &kp PLUS   &kp MINUS  &kp PRCNT   &kp ASTRK    &kp K_VOL_DN  &none      &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              ________   ________       ________   ________
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
