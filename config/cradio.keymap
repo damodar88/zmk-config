@@ -113,6 +113,7 @@ combo_##name {               \
         COMBO(grep,         &grep, 9 19)
         COMBO(cat,          &cat, 9 19)
         COMBO(tail_n,       &tail_n, 9 19)
+        COMBO(cd,           &cd, 10 11)
 
         // navigation
         COMBO(arr_up, &kp UARW,  6  7)
@@ -168,7 +169,7 @@ name: name##_macro {                      \
         MACRO(grep,         &kp G &kp R &kp E &kp P &kp SPACE)
         MACRO(cat,          &kp C &kp A &kp T &kp SPACE)
         MACRO(tail_n,       &kp T &kp A &kp I &kp L &kp SPACE &kp MINUS &kp N &kp SPACE)
-
+        MACRO(cd,           &kp C &kp D &kp SPACE)
     };
 };
 
@@ -214,13 +215,13 @@ name: name##_macro {                      \
         //│          │          │          │          │          │   │          │          │          │          │          │
             &mkdir      &rm_rf      &none     &grep      &touch         &search   &search_c   &kp UARW    &none     &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ |        │  DIR     │   PWD    │          │          │   │          │          │          │          │          │
-            &kp PIPE    &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW   &none
+        //│ CD       │  DIR     │   PWD    │          │          │   │          │          │          │          │          │
+            &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW   &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ~        │          │          │          │          │   │          │          │          │          │          │
             &kp TILDE   &none      &none      &none      &none        &junit_all  &duplicate  &none      &none      &none  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &none       &none         &none      &none
+                                              &none       &ls           &none      &none
         // 
             >;
         };
@@ -260,10 +261,10 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│    ;     │          │          │                     │   │          │          │          │          │          │
-            &kp SEMI       &none      &none   &none     &kp PSCRN       &none       &none      &none      &none      &none 
+            &kp SEMI     &none    &none       &none    &kp PSCRN        &none       &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //           |          │          │  /       │ \        │   │          │          │          │          │          |
-            &none       &none     &kp CARET   &kp FSLH  &kp BSLH        &none       &none      &none      &none      &none 
+        // |         | ~        │          │  /       │ \        │   │          │          │          │          │          |
+           &kp PIPE    &kp TILDE  &kp CARET   &kp FSLH  &kp BSLH        &none       &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  %       │  *       │   │          │          │          │          │          │
            &kp EQUAL   &kp PLUS   &kp MINUS  &kp PRCNT   &kp ASTRK       &none       &none      &none      &none      &none 
