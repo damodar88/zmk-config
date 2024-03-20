@@ -202,7 +202,7 @@ name: name##_macro {                      \
             HRML(A,        O,        E,         U)       &kp I          &kp D      HRMR(H,    T,         N,         S)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ "        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
-            &kp APOS    &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
+            &kp DQT    &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &lt FNC DEL  SPC_NUM        SYM_ENT    &lt CMK BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -236,7 +236,7 @@ name: name##_macro {                      \
         //│ ALL      │  COPY    │  CUP     │ BACK     │ PASTE    |   │          │          │          │          │          │
             &kp LG(A)   &kp LG(C)  &kp LG(X) &kp LG(Z)  &kp LG(V)      &none       &none      &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp CARET   &none         &none      &none
+                                             &none       &none         &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯  
             >;
         };
@@ -246,11 +246,11 @@ name: name##_macro {                      \
         //│ CLONE    │ CHECKOUT │          │          │          │   │ $        │ &        │  {       │  }       │ @        │
          &git_clone &git_checkout &git_branch &git_diff &git_diff_s    &kp DLLR   &kp AMPS   &kp LBRC   &kp RBRC   &kp AT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │ #        │ -        │  (       │  )       │  %       │
-           &git_status &git_add  &git_commit  &git_push  &git_log      &kp HASH   &kp MINUS   &kp LPAR   &kp RPAR   &kp PRCNT
+        //│          │          │          │          │          │   │ #        │ -        │  (       │  )       │  _       │
+           &git_status &git_add  &git_commit  &git_push  &git_log      &kp HASH   &kp MINUS   &kp LPAR   &kp RPAR   &kp UNDERSCORE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │ !        │ ?        │  [       │  ]       │  _       │
-           &git_pull   &none      &none      &none      &none          &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp UNDERSCORE 
+        //│          │          │          │          │          │   │ !        │ ?        │  [       │  ]       │  /       │
+           &git_pull   &none      &none      &none      &none          &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp FSLH 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -260,13 +260,13 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│    ;     │          │          │                     │   │          │          │          │          │          │
-            &kp SEMI       &none      &none      &none      &none         &none       &none      &none      &none      &none 
+            &kp SEMI       &none      &none   &none     &kp PSCRN       &none       &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //           |          │          │          │          │   │          │          │          │          │          |
-            &none       &none      &none      &none      &none         &none       &none      &none      &none      &none 
+        //           |          │          │  /       │ \        │   │          │          │          │          │          |
+            &none       &none     &kp CARET   &kp FSLH  &kp BSLH        &none       &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ =        │  +       │  -       │  /       │  *       │   │          │          │          │          │          │
-           &kp EQUAL   &kp PLUS   &kp MINUS  &kp BSLH   &kp ASTRK       &none       &none      &none      &none      &none 
+        //│ =        │  +       │  -       │  %       │  *       │   │          │          │          │          │          │
+           &kp EQUAL   &kp PLUS   &kp MINUS  &kp PRCNT   &kp ASTRK       &none       &none      &none      &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              ________   ________       ________   ________
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
