@@ -162,6 +162,8 @@ name: name##_macro {                      \
         MACRO(junit_all,    &kp LC(LS (R)))
         MACRO(refactor,     &kp LS(F6))
         MACRO(duplicate,    &kp LG(D))
+        MACRO(resume_debug, &kp LC(LA(R)))
+        MACRO(select_opened_file, &kp LA(F1))
         MACRO(ls,           &kp L &kp S &kp SPACE &kp MINUS &kp MINUS &kp C &kp O &kp L &kp O &kp R &kp EQUAL &kp A &kp U &kp T &kp O)
         MACRO(pwd,          &kp P &kp W &kp D)
         MACRO(mkdir,        &kp M &kp K &kp D &kp I &kp R &kp SPACE)
@@ -215,13 +217,13 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &mkdir      &rm_rf      &none     &grep      &touch         &search   &search_c   &kp UARW    &none     &kp BSPC
+            &mkdir      &rm_rf      &none     &grep      &touch         &search   &search_c   &kp UARW &select_opened_file &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CD       │  DIR     │   PWD    │          │          │   │          │          │          │          │          │
-            &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW   &none
+        //│ CD       │  DIR     │   PWD    │          │          │   │          │          │          │          │  F 8     │
+            &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW    &kp F8
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ ~        │          │          │          │          │   │          │          │          │          │          │
-            &kp TILDE   &none      &none      &none      &none        &junit_all  &duplicate  &none      &none      &none  
+        //│ ~        │  |       │          │          │          │   │          │          │          │          │          │
+            &kp TILDE   &kp PIPE    &none      &none      &none        &junit_all  &duplicate  &none      &none     &resume_debug  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none       &ls           &none      &none
         // 
@@ -263,13 +265,13 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│    ;     │    :     │          │                     │   │          │          │          │          │          │
-            &kp SEMI  &kp COLON    &none       &none    &screan      &kp K_VOL_UP  &kp C_VOL_UP  &none    &none     &kp C_AC_ZOOM_IN 
+            &kp SEMI  &kp COLON    &none       &none    &screan      &kp K_VOL_UP   &none      &none     &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         // |         | ~        │    ^     │  /       │ \        │   │          │          │          │          │          |
-           &kp PIPE    &kp TILDE  &kp CARET   &kp FSLH  &kp BSLH     &kp K_MUTE      &none       &none    &none     &none 
+           &kp PIPE    &kp TILDE  &kp CARET   &kp FSLH  &kp BSLH     &kp K_MUTE     &none      &none     &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  %       │  *       │   │          │          │          │          │          │
-           &kp EQUAL   &kp PLUS   &kp MINUS  &kp PRCNT   &kp ASTRK   &kp K_VOL_DN  &kp C_VOL_DN  &none    &none     &kp C_AC_ZOOM_OUT
+           &kp EQUAL   &kp PLUS   &kp MINUS  &kp PRCNT   &kp ASTRK   &kp K_VOL_DN   &none      &none     &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              ________   ________       ________   ________
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
