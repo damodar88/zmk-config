@@ -265,10 +265,10 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│    ;     │    :     │          │                     │   │          │          │          │          │          │
-            &kp SEMI  &kp COLON    &none       &none    &screan      &kp K_VOL_UP   &none      &none     &none      &none 
+            &kp SEMI  &kp COLON    &none       &none    &screan      &kp K_VOL_UP &bt BT_SEL 0  &none     &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         // |         | ~        │    ^     │  /       │ \        │   │          │          │          │          │          |
-           &kp PIPE    &kp TILDE  &kp CARET   &kp FSLH  &kp BSLH     &kp K_MUTE     &none      &none     &none      &none 
+           &kp PIPE    &kp TILDE  &kp CARET   &kp FSLH  &kp BSLH     &kp K_MUTE   &bt BT_SEL 1      &none     &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  %       │  *       │   │          │          │          │          │          │
            &kp EQUAL   &kp PLUS   &kp MINUS  &kp PRCNT   &kp ASTRK   &kp K_VOL_DN   &none      &none     &none      &none
