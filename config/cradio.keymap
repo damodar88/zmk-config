@@ -149,8 +149,8 @@ name: name##_macro {                      \
         MACRO(git_clone,    &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E &kp SPACE)
         MACRO(git_checkout, &kp G &kp I &kp T &kp SPACE &kp C &kp H &kp E &kp C &kp K &kp O &kp U &kp T &kp SPACE)
         MACRO(git_push,     &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp S &kp H &kp SPACE &kp O &kp R &kp I &kp G &kp I &kp N &kp SPACE)
-        MACRO(git_commit,   &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE &kp APOS)
-        MACRO(git_branch,   &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp SPACE &kp F &kp E &kp A &kp T &kp U &kp R &kp E &kp SPACE)
+        MACRO(git_commit,   &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE &kp DQT)
+        MACRO(git_branch,   &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp SPACE)
         MACRO(git_diff,     &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F)
         MACRO(git_status,   &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S)
         MACRO(git_diff_s,   &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp G &kp E &kp D)
@@ -174,6 +174,13 @@ name: name##_macro {                      \
         MACRO(tail_n,       &kp T &kp A &kp I &kp L &kp SPACE &kp MINUS &kp N &kp SPACE)
         MACRO(cd,           &kp C &kp D &kp SPACE)
         MACRO(screan,       &kp LG(LS(N3)))
+
+        MACRO(cmd_lb, &kp LGUI &kp LBRC)  // Cmd + {
+        MACRO(cmd_rb, &kp LGUI &kp RBRC)  // Cmd + }
+        MACRO(recent_files, &kp LGUI &kp LSHFT &kp E)
+        MACRO(gradle_window, &kp LALT &kp Z)  // Alt + Z para abrir la ventana de Gradle
+        MACRO(point,    &kp LGUI &kp N2)      // Cmd + 2  (Breckpoint)
+        MACRO(terminal,  &kp LALT &kp F12)     // Alt + F12 (Terminal en IntelliJ)
     };
 };
 
@@ -219,11 +226,11 @@ name: name##_macro {                      \
         //│          │          │          │          │          │   │          │          │          │          │          │
             &mkdir      &rm_rf      &none     &grep      &touch         &search   &search_c   &kp UARW &select_opened_file &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CD       │  DIR     │   PWD    │          │          │   │          │          │          │          │  F 8     │
-            &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW    &kp F8
+        //│ CD       │  DIR     │   PWD    │          │          │   │          │          │          │          │          │
+            &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW  &recent_files
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ~        │  |       │          │          │          │   │          │          │          │          │          │
-            &kp TILDE   &kp PIPE    &none      &none      &none        &junit_all  &duplicate  &none      &none     &resume_debug  
+            &kp TILDE   &kp PIPE    &none      &none      &none        &duplicate  &none     &none      &none       &none  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none       &ls           &none      &none
         // 
@@ -233,13 +240,13 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ 1        │  3       │  5       │  7       │ 9        │   │          │          │          │          │          │
-            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &none       &none      &none      &none      &none
+            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &search    &search_c   &none      &none      &point
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 2        │  4       │  6       │  8       │ 0        │   │          │          │          │          │          │
-            &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &none      &none      &none      &none
+            &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &cmd_rb    &none      &cmd_rb    &terminal
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ ALL      │  COPY    │  CUP     │ BACK     │ PASTE    |   │          │          │          │          │          │
-            &kp LG(A)   &kp LG(C)  &kp LG(X) &kp LG(Z)  &kp LG(V)      &none       &none      &none      &none      &none
+        //│ ALL      │  COPY    │  CUP     │ BACK     │ PASTE    |   │          │   F8     │          │          │          │
+            &kp LG(A)   &kp LG(C)  &kp LG(X) &kp LG(Z)  &kp LG(V)      &junit_all  &kp F8      &none   &resume_debug &gradle_window
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none       &none         &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯  
