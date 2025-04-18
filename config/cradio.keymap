@@ -177,7 +177,7 @@ name: name##_macro {                      \
 
         MACRO(cmd_lb, &kp LCMD &kp LBRC)  // Cmd + {
         MACRO(cmd_rb, &kp LCMD &kp RBRC)  // Cmd + }
-        MACRO(recent_files, press(LGUI LSHFT), tap(E), release(LSHFT LGUI))
+        MACRO(recent_files, &down LGUI &down LSHFT &kp E &up LSHFT &up LGUI)
         MACRO(gradle_window, &kp LALT &kp Z)  // Alt + Z para abrir la ventana de Gradle
         MACRO(point,    &kp LGUI &kp N2)      // Cmd + 2  (Breckpoint)
         MACRO(terminal,  &kp LALT &kp F12)     // Alt + F12 (Terminal en IntelliJ)
