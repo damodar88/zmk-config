@@ -175,9 +175,9 @@ name: name##_macro {                      \
         MACRO(cd,           &kp C &kp D &kp SPACE)
         MACRO(screan,       &kp LG(LS(N3)))
 
-        MACRO(cmd_lb, &kp LGUI &kp LBRC)  // Cmd + {
-        MACRO(cmd_rb, &kp LGUI &kp RBRC)  // Cmd + }
-        MACRO(recent_files, &kp LCMD &kp LSHFT &kp E)
+        MACRO(cmd_lb, &kp LCMD &kp LBRC)  // Cmd + {
+        MACRO(cmd_rb, &kp LCMD &kp RBRC)  // Cmd + }
+        MACRO(recent_files, &press LCMD &press LSHFT &kp E &release LSHFT &release LCMD)
         MACRO(gradle_window, &kp LALT &kp Z)  // Alt + Z para abrir la ventana de Gradle
         MACRO(point,    &kp LGUI &kp N2)      // Cmd + 2  (Breckpoint)
         MACRO(terminal,  &kp LALT &kp F12)     // Alt + F12 (Terminal en IntelliJ)
@@ -229,8 +229,8 @@ name: name##_macro {                      \
         //│ CD       │  DIR     │   PWD    │          │          │   │          │          │          │          │          │
             &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW  &recent_files
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ ~        │  |       │          │          │          │   │          │          │          │          │          │
-            &kp TILDE   &kp PIPE    &none      &none      &none        &duplicate  &none     &none      &none       &none  
+        //│ ~        │  |       │          │          │          │   │          │          │  F8      │          │          │
+            &kp TILDE   &kp PIPE    &none      &none      &none        &duplicate &junit_all  &kp F8      &none       &point  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none       &ls           &none      &none
         // 
@@ -240,13 +240,13 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ 1        │  3       │  5       │  7       │ 9        │   │          │          │          │          │          │
-            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &search    &search_c   &none      &none      &point
+            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &none       &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 2        │  4       │  6       │  8       │ 0        │   │          │          │          │          │          │
             &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &cmd_rb    &none      &cmd_rb    &terminal
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ ALL      │  COPY    │  CUP     │ BACK     │ PASTE    |   │          │   F8     │          │          │          │
-            &kp LG(A)   &kp LG(C)  &kp LG(X) &kp LG(Z)  &kp LG(V)      &junit_all  &kp F8      &none   &resume_debug &gradle_window
+        //│ ALL      │  COPY    │  CUP     │ BACK     │ PASTE    |   │          │          │          │          │          │
+            &kp LG(A)   &kp LG(C)  &kp LG(X) &kp LG(Z)  &kp LG(V)      &none       &none      &none    &resume_debug &gradle_window
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none       &none         &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯  
