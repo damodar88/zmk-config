@@ -143,14 +143,15 @@ name: name##_macro {                      \
 
 / {
     macros {
-        recent_files: recent_files_macro {
+        recent_files_manual: recent_files_manual {
             compatible = "zmk,behavior-macro";
-            label = "RECENT_FILES";
+            label = "RECENT_FILES_MANUAL";
             #binding-cells = <0>;
-            bindings 
-                = <&macro_press &kp LGUI &kp LSHFT>
-                , <&macro_tap &kp E>
-                , <&macro_release &kp LSHFT &kp LGUI>;
+            bindings = <
+                &macro_press &kp LGUI &macro_press &kp LSHFT,
+                &macro_tap &kp E,
+                &macro_release &kp LSHFT &macro_release &kp LGUI
+            >;
         };
     };
 };
@@ -191,7 +192,7 @@ name: name##_macro {                      \
 
         MACRO(cmd_lb, &kp LCMD &kp LBRC)  // Cmd + {
         MACRO(cmd_rb, &kp LCMD &kp RBRC)  // Cmd + }
-        MACRO(recent_files, &macro_press &kp LGUI &macro_press &kp LSHFT, &macro_tap &kp E, &macro_release &kp LSHFT &macro_release &kp LGUI)
+        MACRO(recent_files, &kp LG(LS(E)))
         MACRO(gradle_window, &kp LALT &kp Z)  // Alt + Z para abrir la ventana de Gradle
         MACRO(point,    &kp LGUI &kp N2)      // Cmd + 2  (Breckpoint)
         MACRO(terminal,  &kp LALT &kp F12)     // Alt + F12 (Terminal en IntelliJ)
