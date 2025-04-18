@@ -143,6 +143,20 @@ name: name##_macro {                      \
 
 / {
     macros {
+        recent_files: recent_files_macro {
+            compatible = "zmk,behavior-macro";
+            label = "RECENT_FILES";
+            #binding-cells = <0>;
+            bindings 
+                = <&macro_press &kp LGUI &kp LSHFT>
+                , <&macro_tap &kp E>
+                , <&macro_release &kp LSHFT &kp LGUI>;
+        };
+    };
+};
+
+/ {
+    macros {
         MACRO(vim_q,        &kp COLON &kp Q &kp EXCL)
         MACRO(vim_s,        &kp COLON &kp X)
         MACRO(dir_up,       &kp DOT &kp DOT &kp FSLH)
