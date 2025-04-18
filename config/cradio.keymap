@@ -192,7 +192,7 @@ name: name##_macro {                      \
 
         MACRO(cmd_lb, &kp LCMD &kp LBRC)  // Cmd + {
         MACRO(cmd_rb, &kp LCMD &kp RBRC)  // Cmd + }
-        MACRO(recent_files, &kp LG(LS(E)))
+        //MACRO(recent_files, &kp LG(LS(E)))
         MACRO(gradle_window, &kp LALT &kp Z)  // Alt + Z para abrir la ventana de Gradle
         MACRO(point,    &kp LGUI &kp N2)      // Cmd + 2  (Breckpoint)
         MACRO(terminal,  &kp LALT &kp F12)     // Alt + F12 (Terminal en IntelliJ)
@@ -242,7 +242,7 @@ name: name##_macro {                      \
             &mkdir      &rm_rf      &none     &grep      &touch         &search   &search_c   &kp UARW &select_opened_file &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CD       │  DIR     │   PWD    │          │          │   │          │          │          │          │          │
-            &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW  &recent_files
+            &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW  &recent_files_manual
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ~        │  |       │          │          │          │   │          │          │  F8      │          │          │
             &kp TILDE   &kp PIPE    &none      &none      &none        &duplicate &junit_all  &kp F8      &none       &point  
