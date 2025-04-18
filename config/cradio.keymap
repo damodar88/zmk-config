@@ -177,7 +177,7 @@ name: name##_macro {                      \
 
         MACRO(cmd_lb, &kp LCMD &kp LBRC)  // Cmd + {
         MACRO(cmd_rb, &kp LCMD &kp RBRC)  // Cmd + }
-        MACRO(recent_files, &kp LCMD(LSHFT(E)))
+        MACRO(recent_files, &lcmd &lshft &kp E)
         MACRO(gradle_window, &kp LALT &kp Z)  // Alt + Z para abrir la ventana de Gradle
         MACRO(point,    &kp LGUI &kp N2)      // Cmd + 2  (Breckpoint)
         MACRO(terminal,  &kp LALT &kp F12)     // Alt + F12 (Terminal en IntelliJ)
@@ -275,7 +275,7 @@ name: name##_macro {                      \
             &kp SEMI  &kp COLON    &none       &none    &screan      &kp K_VOL_UP &bt BT_SEL 0  &none     &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         // |         | ~        │    ^     │  /       │ \        │   │          │          │          │          │          |
-           &kp PIPE    &kp TILDE  &kp CARET   &kp FSLH  &kp BSLH     &kp K_MUTE   &bt BT_SEL 1      &none     &none      &none 
+           &kp PIPE    &kp TILDE  &kp CARET   &kp FSLH  &kp BSLH     &kp K_MUTE   &bt BT_SEL 1 &none     &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ =        │  +       │  -       │  %       │  *       │   │          │          │          │          │          │
            &kp EQUAL   &kp PLUS   &kp MINUS  &kp PRCNT   &kp ASTRK   &kp K_VOL_DN   &none      &none     &none      &none
