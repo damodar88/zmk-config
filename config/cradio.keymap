@@ -132,25 +132,31 @@ combo_##name {               \
 
 
 #define MACRO(name, keys)                 \
+name: name##_macro {                      \
+    label          = #name;               \
+    compatible     = "zmk,behavior-macro";\
+    tap-ms         = <1>;                 \
+    wait-ms        = <1>;                 \
+    #binding-cells = <0>;                 \
+    bindings       = <keys>;              \
+};
+
 / {
     macros {
-        // Primero tu macro manual
-        recent_files_manual: recent_files_manual {
+        // Macro manual para Cmd+Shift+E
+        recent_files: recent_files {
             compatible = "zmk,behavior-macro";
-            label = "RECENT_FILES_MANUAL";
+            label = "RECENT_FILES";
             #binding-cells = <0>;
             bindings = <
-                &macro_press &kp LGUI &macro_press &kp LSHFT,
-                &macro_tap &kp E,
-                &macro_release &kp LSHFT &macro_release &kp LGUI
+                &kp LGUI &kp LSHFT &kp E
             >;
         };
 
-        // Luego el resto de macros usando tu #define MACRO
-        MACRO(vim_q,        &kp COLON &kp Q &kp EXCL)
-        MACRO(vim_s,        &kp COLON &kp X)
-        MACRO(dir_up,       &kp DOT &kp DOT &kp FSLH)
-        // ... (todas las demás macros)
+        // Otras macros usando la definición MACRO
+        MACRO(vim_q, &kp COLON &kp Q &kp EXCL)
+        MACRO(vim_s, &kp COLON &kp X)
+        // ... (todas tus otras macros)
     };
 };
 
@@ -191,7 +197,7 @@ combo_##name {               \
 
         MACRO(cmd_lb, &kp LCMD &kp LBRC)  // Cmd + {
         MACRO(cmd_rb, &kp LCMD &kp RBRC)  // Cmd + }
-        //MACRO(recent_files, &kp LG(LS(E)))
+   
         MACRO(gradle_window, &kp LALT &kp Z)  // Alt + Z para abrir la ventana de Gradle
         MACRO(point,    &kp LGUI &kp N2)      // Cmd + 2  (Breckpoint)
         MACRO(terminal,  &kp LALT &kp F12)     // Alt + F12 (Terminal en IntelliJ)
@@ -241,7 +247,7 @@ combo_##name {               \
             &mkdir      &rm_rf      &none     &grep      &touch         &search   &search_c   &kp UARW &select_opened_file &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CD       │  DIR     │   PWD    │          │          │   │          │          │          │          │          │
-            &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW  &recent_files_manual
+            &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW  &recent_files
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ~        │  |       │          │          │          │   │          │          │  F8      │          │          │
             &kp TILDE   &kp PIPE    &none      &none      &none        &duplicate &junit_all  &kp F8      &none       &point  
