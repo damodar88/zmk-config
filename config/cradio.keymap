@@ -132,17 +132,9 @@ combo_##name {               \
 
 
 #define MACRO(name, keys)                 \
-name: name##_macro {                      \
-    label          = #name;               \
-    compatible     = "zmk,behavior-macro";\
-    tap-ms         = <1>;                 \
-    wait-ms        = <1>;                 \
-    #binding-cells = <0>;                 \
-    bindings       = <keys>;              \
-};
-
 / {
     macros {
+        // Primero tu macro manual
         recent_files_manual: recent_files_manual {
             compatible = "zmk,behavior-macro";
             label = "RECENT_FILES_MANUAL";
@@ -153,8 +145,15 @@ name: name##_macro {                      \
                 &macro_release &kp LSHFT &macro_release &kp LGUI
             >;
         };
+
+        // Luego el resto de macros usando tu #define MACRO
+        MACRO(vim_q,        &kp COLON &kp Q &kp EXCL)
+        MACRO(vim_s,        &kp COLON &kp X)
+        MACRO(dir_up,       &kp DOT &kp DOT &kp FSLH)
+        // ... (todas las demás macros)
     };
 };
+
 
 / {
     macros {
