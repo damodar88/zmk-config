@@ -180,9 +180,9 @@ name: name##_macro {                      \
         MACRO(cmd_rb, &kp LCMD &kp RBRC)  // Cmd + }
         MACRO(recent_files, &kp LG(LS(E)))
 
-        MACRO(generate_code, &kp LA(INS)) 
+        MACRO(class_hierarchy, &kp LA(H)) 
+        MACRO(generate_code, &kp LG(N))  // Cmd+N (Mac)
         MACRO(go_to_impl, &kp LG(LA(B)))
-        MACRO(point,    &kp LGUI &kp N2)      // Cmd + 2  (Breckpoint)
         MACRO(format_code, &kp LA(LS(L))) 
         MACRO(show_usages, &kp LG(LA(F7))) 
     };
@@ -244,7 +244,7 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ 1        │  3       │  5       │  7       │ 9        │   │          │          │          │          │          │
-            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &none       &none      &none      &none      &point
+            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &none       &none      &none      &none      &class_hierarchy
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 2        │  4       │  6       │  8       │ 0        │   │          │          │          │          │          │
             &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &cmd_rb    &none      &cmd_rb    &show_usages
