@@ -179,9 +179,12 @@ name: name##_macro {                      \
         MACRO(cmd_lb, &kp LCMD &kp LBRC)  // Cmd + {
         MACRO(cmd_rb, &kp LCMD &kp RBRC)  // Cmd + }
         MACRO(recent_files, &kp LG(LS(E)))
-        MACRO(gradle_window, &kp LALT &kp Z)  // Alt + Z para abrir la ventana de Gradle
+
+        MACRO(generate_code, &kp LA(INS)) 
+        MACRO(go_to_impl, &kp LG(LA(B)))
         MACRO(point,    &kp LGUI &kp N2)      // Cmd + 2  (Breckpoint)
-        MACRO(terminal,  &kp LALT &kp F12)     // Alt + F12 (Terminal en IntelliJ)
+        MACRO(format_code, &kp LA(LS(L))) 
+        MACRO(show_usages, &kp LG(LA(F7))) 
     };
 };
 
@@ -231,7 +234,7 @@ name: name##_macro {                      \
             &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW  &recent_files
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ~        │  |       │          │          │          │   │          │          │          │          │          │
-            &kp TILDE   &kp PIPE    &none      &none      &none        &duplicate &junit_all  &none      &none   &resume_debug  
+            &kp TILDE   &kp PIPE    &none      &none      &none        &duplicate &junit_all &go_to_impl &format_code &resume_debug  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none       &ls           &none      &none
         // 
@@ -244,10 +247,10 @@ name: name##_macro {                      \
             &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &none       &none      &none      &none      &point
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 2        │  4       │  6       │  8       │ 0        │   │          │          │          │          │          │
-            &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &cmd_rb    &none      &cmd_rb    &terminal
+            &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &cmd_rb    &none      &cmd_rb    &show_usages
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ALL      │  COPY    │  CUP     │ BACK     │ PASTE    |   │          │          │          │          │          │
-            &kp LG(A)   &kp LG(C)  &kp LG(X) &kp LG(Z)  &kp LG(V)      &none       &none      &none      &none        &gradle_window
+            &kp LG(A)   &kp LG(C)  &kp LG(X) &kp LG(Z)  &kp LG(V)      &none       &none      &none      &none      &generate_code
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none       &none         &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯  
