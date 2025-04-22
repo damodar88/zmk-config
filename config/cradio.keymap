@@ -148,8 +148,8 @@ name: name##_macro {                      \
         MACRO(vim_s,        &kp COLON &kp X)
         MACRO(dir_up,       &kp DOT &kp DOT &kp FSLH)
         MACRO(git_clone,    &kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E &kp SPACE)
-        MACRO(git_checkout, &kp G &kp I &kp T &kp SPACE &kp C &kp H &kp E &kp C &kp K &kp O &kp U &kp T &kp SPACE)
-        MACRO(git_push,     &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp S &kp H &kp SPACE &kp O &kp R &kp I &kp G &kp I &kp N &kp SPACE)
+        MACRO(git_checkout, &kp G &kp I &kp T &kp SPACE &kp C &kp H &kp E &kp C &kp K &kp O &kp U &kp T &kp SPACE MINUS &kp B)
+        MACRO(git_push,     &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp S &kp H &kp SPACE MINUS &kp U SPACE &kp O &kp R &kp I &kp G &kp I &kp N &kp SPACE)
         MACRO(git_commit,   &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE &kp DQT)
         MACRO(git_branch,   &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp SPACE)
         MACRO(git_diff,     &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F)
@@ -157,7 +157,16 @@ name: name##_macro {                      \
         MACRO(git_diff_s,   &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp G &kp E &kp D)
         MACRO(git_add,      &kp G &kp I &kp T &kp SPACE &kp A &kp D &kp D &kp SPACE &kp MINUS &kp LS(A))
         MACRO(git_log,      &kp G &kp I &kp T &kp SPACE &kp L &kp O &kp G &kp SPACE &kp MINUS &kp MINUS &kp S &kp T &kp A &kp T)
+        MACRO(git_log_graph, &kp G &kp I &kp T &kp SPACE &kp L &kp O &kp G &kp SPACE &kp MINUS &kp MINUS &kp O &kp N &kp E &kp L &kp I &kp N &kp E &kp SPACE &kp MINUS &kp MINUS &kp G &kp R &kp A &kp P &kp H)
         MACRO(git_pull,     &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp L &kp L &kp SPACE &kp O &kp R &kp I &kp G &kp I &kp N &kp SPACE)
+        MACRO(git_merge,    &kp G &kp I &kp T &kp SPACE &kp M &kp E &kp R &kp G &kp E)
+        MACRO(git_fetch,    &kp G &kp I &kp T &kp SPACE &kp F &kp E &kp T &kp C &kp H)
+        MACRO(git_stash_empty_msg, &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp S &kp H &kp SPACE &kp DQT &kp DQT)
+        MACRO(git_stash_list, &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp S &kp H &kp SPACE &kp L &kp I &kp S &kp T)
+        MACRO(git_stash_apply, &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp S &kp H &kp SPACE &kp A &kp P &kp P &kp L &kp Y &kp SPACE &kp S &kp T &kp A &kp S &kp H &kp AT &kp LBRC &kp RBRC)
+        MACRO(git_stash_branch, &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp S &kp H &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp SPACE &kp F &kp E &kp A &kp T &kp U &kp R &kp E &kp SPACE &kp S &kp T &kp A &kp S &kp H &kp AT &kp LBRC &kp RBRC)
+        MACRO(git_stash_show_diff, &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp S &kp H &kp SPACE &kp S &kp H &kp O &kp W &kp SPACE &kp S &kp T &kp A &kp S &kp H &kp AT &kp LBRC &kp RBRC &kp SPACE &kp MINUS &kp P)
+
         MACRO(search,       &kp LG(LS (F)))
         MACRO(search_c,     &kp LG(LS (O)))
         MACRO(junit_all,    &kp LC(LS (R)))
@@ -247,7 +256,7 @@ name: name##_macro {                      \
             &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &none       &none      &none      &none      &class_hierarchy
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 2        │  4       │  6       │  8       │ 0        │   │          │          │          │          │          │
-            &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &cmd_rb    &none      &cmd_rb    &show_usages
+            &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &cmd_lb    &none      &cmd_rb    &show_usages
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ALL      │  COPY    │  CUP     │ BACK     │ PASTE    |   │          │          │          │          │          │
             &kp LG(A)   &kp LG(C)  &kp LG(X) &kp LG(Z)  &kp LG(V)      &none       &none      &none      &none      &generate_code
@@ -266,7 +275,7 @@ name: name##_macro {                      \
            &git_status &git_add  &git_commit  &git_push  &git_log      &kp HASH   &kp MINUS   &kp LPAR   &kp RPAR   &kp UNDERSCORE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │ !        │ ?        │  [       │  ]       │  /       │
-           &git_pull   &none      &none      &none      &none          &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp FSLH 
+           &git_pull   &none     &git_fetch  &git_merge &git_log_graph &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp FSLH 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
