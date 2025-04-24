@@ -226,8 +226,8 @@ name: name##_macro {                      \
         //│ A        │  O       │  E       │  U       │  I       │   │  D       │  H       │  T       │  N       │  S       │
             HRML(A,        O,        E,         U)       &kp I          &kp D      HRMR(H,    T,         N,         S)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ "        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
-            &kp DQT    &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
+        //│ '        │  Q       │  J       │  K       │  X       │   │  B       │  M       │  W       │  V       │   Z      │
+            &kp SQT    &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V       &kp Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &lt FNC DEL  SPC_NUM        SYM_ENT    &lt CMK BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -277,21 +277,21 @@ name: name##_macro {                      \
         //│          │          │          │          │          │   │ !        │ ?        │  [       │  ]       │  /       │
           &git_pull   &git_s    &git_s_list &git_s_apply &git_graph    &kp EXCL   &kp QMARK   &kp LBKT   &kp RBKT   &kp FSLH 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                        &git_s_list  &git_show_diff   &git_s_branch   &none 
+                                        &git_s_list  &git_show_diff     &none    &git_s_branch
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
         FNC_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│    ;     │    :     │          │                     │   │          │          │          │          │          │
-            &kp SEMI  &kp COLON    &none       &none    &screan      &kp K_VOL_UP &bt BT_SEL 0  &none     &none      &none 
+        //│    ;     │    :     │    ^     │                     │   │          │          │          │          │          │
+            &kp SEMI  &kp COLON   &kp CARET    &none    &screan      &kp K_VOL_UP &bt BT_SEL 0  &none     &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        // |         | ~        │    ^     │  /       │ \        │   │          │          │          │          │          |
-           &kp PIPE    &kp TILDE  &kp CARET   &kp FSLH  &kp BSLH     &kp K_MUTE   &bt BT_SEL 1 &none     &none      &none 
+        //| =        | <        │ >        │  /       │ \        │   │          │          │          │          │          |
+           &kp EQUAL   &kp LT     &kp GT     &kp FSLH  &kp BSLH       &kp K_MUTE  &bt BT_SEL 1 &none     &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ =        │  +       │  -       │  %       │  *       │   │          │          │          │          │          │
-           &kp EQUAL   &kp PLUS   &kp MINUS  &kp PRCNT   &kp ASTRK   &kp K_VOL_DN   &none      &none     &none      &none
+        //│ `        │  +       │  -       │  %       │  *       │   │          │          │          │          │          │
+           &kp GRAVE   &kp PLUS   &kp MINUS  &kp PRCNT   &kp ASTRK   &kp K_VOL_DN   &none      &none     &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              ________   ________       ________   ________
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
