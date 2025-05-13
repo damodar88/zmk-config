@@ -1,40 +1,41 @@
-# ZMK Config for Ferris Keyboard (Dvorak Layout)
+# ZMK Config: Ferris Keyboard (Dvorak for Git/IntelliJ/Linux)
 
-This repository contains a ZMK firmware configuration for a Ferris keyboard with a Dvorak layout, optimized for Git, IntelliJ, and Linux workflows.
+![Ferris Keyboard](https://i.imgur.com/JKQl6LY.jpg)
+
+A Dvorak-optimized firmware configuration for Ferris split keyboards with developer shortcuts for Git, IntelliJ, and Linux workflows.
 
 ## Features
 
 - **Dvorak layout** with home row mods (HRML/HRMR)
-- **Layer-based workflow** with dedicated layers for:
-  - **Git commands** (clone, checkout, commit, push, etc.)
-  - **IntelliJ shortcuts** (search, refactor, debug, etc.)
-  - **Linux commands** (ls, pwd, mkdir, grep, etc.)
-  - **Navigation** (arrows, word navigation)
-  - **Symbols and numbers**
-- **Combo keys** for quick access to common commands
-- **Macros** for complex key sequences
-- **Bluetooth support** with multiple device switching
+- **Layer-based workflow**:
+  - Git commands (clone, checkout, commit, push)
+  - IntelliJ shortcuts (search, refactor, debug)
+  - Linux commands (ls, grep, mkdir)
+- **40+ combos** for quick access
+- **Bluetooth support** (3 devices)
 
 ## Layers
 
-1. **BASE**: Default Dvorak layer with home row mods
-2. **CMK**: Command layer for Linux/IntelliJ commands
-3. **NUM**: Number layer with common editor shortcuts
-4. **SYM**: Symbol layer with Git commands
-5. **FNC**: Function layer with special characters and Bluetooth controls
+| Layer | Description                  |
+|-------|------------------------------|
+| BASE  | Default Dvorak with mods     |
+| CMK   | Linux/IntelliJ commands      |
+| NUM   | Numbers & editor shortcuts   |
+| SYM   | Symbols & Git commands       |
+| FNC   | Special chars & Bluetooth    |
 
 ## 🔧 Installation
 
-### Quick Method (Pre-built firmware):
-1. Go to **Actions** → "Build Firmware" tab
-2. Download artifacts from the last successful build
-3. Connect your Ferris in bootloader mode (double-click reset button)
-4. Copy the firmware files:
-   - `ferris_left.uf2` to the left half's storage
-   - `ferris_right.uf2` to the right half's storage
-5. The keyboard will automatically reboot
+### Quick Method (Pre-built):
+1. Go to **Actions** → "Build Firmware"
+2. Download latest successful build
+3. Connect Ferris in bootloader mode (double-click reset)
+4. Copy:
+   - `ferris_left.uf2` → Left half
+   - `ferris_right.uf2` → Right half
+5. Auto-reboots when done
 
-### Manual Compilation:
+### Build Manually:
 ```bash
 # Requires ZMK environment
 west init -l config/
@@ -42,31 +43,22 @@ west update
 west build -b nice_nano_v2 -- -DSHIELD=ferris_left
 # Repeat for right half
 
-## ⚙️ Keymap Customization
+## Keymap Customization
+###Edit config/cardio.keymap:
 
-**Main file:** `config/cardio.keymap`  
-
-**Key editable elements:**  
-```c
-/* Layer Example */
+c
+// Change base layer keys
 BASE_layer {
     bindings = <
-        **&kp Q**    **&mt ESC TAB**  // Keypress vs. mod-tap
+        &kp Q    &kp W    &kp F
     >;
 };
 
-/* Combo Example */
+// Modify combos
 combo_git_commit {
-    **timeout-ms = <30>**;     // Adjust trigger speed
-    **key-positions = <23 8>**; // Physical key locations
-};
+    timeout-ms = <30>;
+    key-positions = <23 8>;
+}
 
-###The main configuration file is config/cardio.keymap
-
-## License
-
-MIT License (see SPDX-License-Identifier in source)
-
----
-
-**Note**: This configuration is based on the work of @filterpaper and has been customized for Dvorak layout with Git/IntelliJ/Linux workflows.
+🔹 Based on @filterpaper's work
+🔹 License: MIT (see SPDX header)
