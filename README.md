@@ -28,6 +28,19 @@ A Dvorak-optimized firmware configuration for Ferris split keyboards with develo
 
 Edit config/cardio.keymap
 
+// Change base layer keys
+BASE_layer {
+    bindings = <
+        &kp Q    &kp W    &kp F
+    >;
+};
+
+// Modify combos
+combo_git_commit {
+    timeout-ms = <30>;
+    key-positions = <23 8>;
+} 
+
 ## 🔧 Installation
 
 ### Quick Method (Pre-built):
