@@ -44,7 +44,7 @@ west build -b nice_nano_v2 -- -DSHIELD=ferris_left
 
 ## ⚙️ Customization
 
-The main configuration file is config/cardio.keymap
+###The main configuration file is config/cardio.keymap
 
 ## License
 
