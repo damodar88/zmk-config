@@ -43,18 +43,8 @@ west update
 west build -b nice_nano_v2 -- -DSHIELD=ferris_left
 # Repeat for right half
 
-// Change base layer keys
-BASE_layer {
-    bindings = <
-        &kp Q    &kp W    &kp F
-    >;
-};
-
-// Modify combos
-combo_git_commit {
-    timeout-ms = <30>;
-    key-positions = <23 8>;
-} 
+## Keymap Customization
+Edit config/cardio.keymap
 
 
 🔹 Based on @filterpaper's work
