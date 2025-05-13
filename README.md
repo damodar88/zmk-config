@@ -42,7 +42,7 @@ west update
 west build -b nice_nano_v2 -- -DSHIELD=ferris_left
 # Repeat for right half
 
-## ⚙️ Keymap Customization*
+## ⚙️ Keymap Customization
 
 The main configuration file is config/cardio.keymap
 
