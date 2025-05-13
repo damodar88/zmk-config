@@ -42,7 +42,24 @@ west update
 west build -b nice_nano_v2 -- -DSHIELD=ferris_left
 # Repeat for right half
 
-## ⚙️ Customization
+## ⚙️ Keymap Customization
+
+**Main file:** `config/cardio.keymap`  
+
+**Key editable elements:**  
+```c
+/* Layer Example */
+BASE_layer {
+    bindings = <
+        **&kp Q**    **&mt ESC TAB**  // Keypress vs. mod-tap
+    >;
+};
+
+/* Combo Example */
+combo_git_commit {
+    **timeout-ms = <30>**;     // Adjust trigger speed
+    **key-positions = <23 8>**; // Physical key locations
+};
 
 ###The main configuration file is config/cardio.keymap
 
