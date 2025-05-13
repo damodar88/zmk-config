@@ -23,19 +23,44 @@ This repository contains a ZMK firmware configuration for a Ferris keyboard with
 4. **SYM**: Symbol layer with Git commands
 5. **FNC**: Function layer with special characters and Bluetooth controls
 
-## Installation
+## 🔧 Installation
 
-1. Clone this repository
-2. Build with ZMK (requires ZMK setup)
-3. Flash to your Ferris keyboard
+### Quick Method (Pre-built firmware):
+1. Go to **Actions** → "Build Firmware" tab
+2. Download artifacts from the last successful build
+3. Connect your Ferris in bootloader mode (double-click reset button)
+4. Copy the firmware files:
+   - `ferris_left.uf2` to the left half's storage
+   - `ferris_right.uf2` to the right half's storage
+5. The keyboard will automatically reboot
 
-## Customization
+### Manual Compilation:
+```bash
+# Requires ZMK environment
+west init -l config/
+west update
+west build -b nice_nano_v2 -- -DSHIELD=ferris_left
+# Repeat for right half
 
-Edit the `.dtsi` files to modify:
-- Key positions
-- Tap/hold timing
-- Combo keys
-- Macros
+## ⚙️ Keymap Customization
+
+The main configuration file is `config/cardio.keymap` where you can:
+
+```c
+/* 1. Modify layers (example) */
+BASE_layer {
+    bindings = <
+        &kp Q    &kp W    &kp F    // Change regular keys
+        &mt ESC TAB                 // Modify hold-tap behaviors
+    >;
+};
+
+/* 2. Adjust combos (example) */
+combo_git_commit {
+    timeout-ms = <30>;
+    bindings = <&git_commit>;      // Macro binding
+    key-positions = <23 8>;        // Physical key positions
+};
 
 ## License
 
