@@ -24,6 +24,10 @@ A Dvorak-optimized firmware configuration for Ferris split keyboards with develo
 | SYM   | Symbols & Git commands       |
 | FNC   | Special chars & Bluetooth    |
 
+## Keymap Customization
+
+Edit config/cardio.keymap
+
 ## 🔧 Installation
 
 ### Quick Method (Pre-built):
