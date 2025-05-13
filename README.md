@@ -44,23 +44,7 @@ west build -b nice_nano_v2 -- -DSHIELD=ferris_left
 
 ## ⚙️ Keymap Customization*
 
-The main configuration file is config/cardio.keymap where you can:
-
-```c
-/* 1. Modify layers (example) */
-BASE_layer {
-    bindings = <
-        &kp Q    &kp W    &kp F    // Change regular keys
-        &mt ESC TAB                 // Modify hold-tap behaviors
-    >;
-};
-
-/* 2. Adjust combos (example) */
-combo_git_commit {
-    timeout-ms = <30>;
-    bindings = <&git_commit>;      // Macro binding
-    key-positions = <23 8>;        // Physical key positions
-};
+The main configuration file is config/cardio.keymap
 
 ## License
 
