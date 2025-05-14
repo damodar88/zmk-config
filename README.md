@@ -1,6 +1,6 @@
 # ZMK Config: Ferris Keyboard (Dvorak for Git/IntelliJ/Linux)
 
-![Ferris Keyboard](https://i.imgur.com/JKQl6LY.jpg)
+![Ferris Sweep Keyboard](https://holykeebs.com/cdn/shop/products/ferris-sweep_1200x1200.jpg?v=1673450426)
 
 A Dvorak-optimized firmware configuration for Ferris split keyboards with developer shortcuts for Git, IntelliJ, and Linux workflows.
 
