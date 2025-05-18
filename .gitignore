@@ -1,0 +1,57 @@
+# ZMK Build Artifacts
+/build/
+/out/
+/firmware/
+*.uf2
+*.hex
+*.bin
+*.log
+
+# ZMK Environment
+/.west/
+/zephyr/
+/ncs/
+/modules/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*~
+*.swo
+
+# PlatformIO
+.pio/
+*.pyc
+
+# macOS
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Local configuration
+/prj.conf
+/app/*.overlay
+
+# Dependency directories
+node_modules/
+
+# Debug files
+*.elf
+*.map
+*.lst
+*.o
+*.d
+*.a
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# QMK compatibility (if needed)
+*.eep
+*.lss
+*.sym
