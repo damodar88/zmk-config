@@ -191,7 +191,6 @@ name: name##_macro {                      \
 
         MACRO(class_hierarchy, &kp LA(H)) 
         MACRO(generate_code, &kp LG(N))  // Cmd+N (Mac)
-        MACRO(go_to_impl, &kp LG(LA(B)))
         MACRO(show_usages, &kp LG(LA(F7))) 
     };
 };
@@ -236,13 +235,13 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &mkdir      &rm_rf      &none     &grep      &touch         &search   &search_c  &kp UARW   &select_opened_file &kp BSPC
+            &mkdir      &rm_rf      &none     &grep      &touch         &search   &search_c   &kp UARW &select_opened_file &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CD       │  DIR     │   PWD    │          │          │   │          │          │          │          │          │
-            &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW   &kp DARW   &kp RARW  &recent_files
+            &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW    &kp DARW   &kp RARW  &recent_files
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ~        │  |       │          │          │          │   │          │          │          │          │          │
-            &kp TILDE   &kp PIPE    &none      &none      &none        &duplicate &junit_all &kp F8      &kp F2   &resume_debug  
+            &kp TILDE   &kp PIPE    &none      &none      &none        &duplicate &junit_all  &none      &none     &resume_debug  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none       &ls           &none      &none
         // 
@@ -252,13 +251,13 @@ name: name##_macro {                      \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ 1        │  3       │  5       │  7       │ 9        │   │          │          │          │          │          │
-            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &none       &none      &none      &none      &class_hierarchy
+            &kp N1      &kp N3     &kp N5     &kp N7    &kp N9         &kp        &none      &none      &none      &class_hierarchy
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 2        │  4       │  6       │  8       │ 0        │   │          │          │          │          │          │
-            &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &none       &cmd_lb    &none      &cmd_rb    &show_usages
+            &kp N2      &kp N4     &kp N6     &kp N8    &kp N0         &kp F8      &cmd_lb    &none      &cmd_rb    &show_usages
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ALL      │  COPY    │  CUP     │ BACK     │ PASTE    |   │          │          │          │          │          │
-            &kp LG(A)   &kp LG(C)  &kp LG(X) &kp LG(Z)  &kp LG(V)      &none       &none      &none      &none      &generate_code
+            &kp LG(A)   &kp LG(C)  &kp LG(X) &kp LG(Z)  &kp LG(V)      &kp F2       &none      &none      &none      &generate_code
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none       &none         &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯  
