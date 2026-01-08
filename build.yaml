@@ -1,8 +1,23 @@
-# .github/workflows/build.yaml
----
+# Si tienes configuraciones para ambos teclados
 include:
-  # Para Ferris Sweep (recomendado)
+  # Ferris
   - board: nice_nano_v2
     shield: ferris_left
+    keymap: cardio
+    artifact-name: ferris_left
   - board: nice_nano_v2
     shield: ferris_right
+    keymap: cardio
+    artifact-name: ferris_right
+  
+  # Cradio (si existe)
+  - board: nice_nano_v2
+    shield: cradio_left
+    cmake-args: -DSHIELD=cradio_left
+    keymap: cardio
+    artifact-name: cradio_left
+  - board: nice_nano_v2
+    shield: cradio_right
+    cmake-args: -DSHIELD=cradio_right
+    keymap: cardio
+    artifact-name: cradio_right
