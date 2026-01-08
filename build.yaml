@@ -1,9 +1,11 @@
-# build.yaml - Este archivo define qué builds hacer
+# build.yaml
 ---
 include:
   - board: nice_nano_v2
     shield: ferris_left
     keymap: cardio
+    cmake-args: -DZMK_CONFIG="${{ github.workspace }}/config"
   - board: nice_nano_v2
     shield: ferris_right
     keymap: cardio
+    cmake-args: -DZMK_CONFIG="${{ github.workspace }}/config"
