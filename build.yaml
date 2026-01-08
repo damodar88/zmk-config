@@ -1,9 +1,9 @@
-# build.yaml - EN LA RAÍZ del repositorio
+# board alternativos para nRF52840
 ---
 include:
-  - board: nice_nano_v2
+  - board: nrf52840dongle_nrf52840
     shield: ferris_left
     keymap: cardio
-  - board: nice_nano_v2
+  - board: nrf52840dongle_nrf52840
     shield: ferris_right
     keymap: cardio
