@@ -192,7 +192,10 @@ name: name##_macro {                      \
         MACRO(class_hierarchy, &kp LA(H)) 
         MACRO(generate_code, &kp LG(N))  // Cmd+N (Mac)
         MACRO(alt_cmd_r, &kp LA(LG(R)))
-        MACRO(show_usages, &kp LG(LA(F7))) 
+        MACRO(show_usages, &kp LG(LA(F7)))
+        MACRO(stop, &kp LG(F2))
+        MACRO(debug_continue, &kp F8)
+        MACRO(debu_resumen, &kp LG(LA(R)))
     };
 };
 
@@ -242,7 +245,7 @@ name: name##_macro {                      \
             &cd         &dir_up     &pwd      &cat       &tail_n       &refactor  &kp LARW    &kp DARW   &kp RARW  &recent_files
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ~        │  |       │          │          │          │   │          │          │          │          │          │
-            &kp TILDE   &kp PIPE    &none      &none      &none        &duplicate &junit_all  &none      &none     &resume_debug  
+            &kp TILDE   &kp PIPE    &none      &none      &none        &duplicate &junit_all &generate_code &stop  &resume_debug  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none       &ls           &none      &none
         // 
@@ -260,7 +263,7 @@ name: name##_macro {                      \
         //│ ALL      │  COPY    │  CUP     │ BACK     │ PASTE    |   │          │          │          │          │          │
             &kp LG(A)   &kp LG(C)  &kp LG(X) &kp LG(Z)  &kp LG(V)      &none      &none      &none      &none      &generate_code
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &none       &none         &none      &none
+                                             &none       &none       &debug_continue &debu_resumen
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯  
             >;
         };
