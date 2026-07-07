@@ -3,5 +3,5 @@ include:
     shield: cradio_left
     keymap: cardio
   - board: nice_nano@2.0.0//zmk
-    shield: fcradio_right
+    shield: cradio_right
     keymap: cardio
