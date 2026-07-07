@@ -1,8 +1,7 @@
 include:
   - board: nice_nano@2.0.0//zmk
-    shield: cradio_left
+    shield: ferris_sweep_left
     keymap: cardio
-
   - board: nice_nano@2.0.0//zmk
-    shield: cradio_right
+    shield: ferris_sweep_right
     keymap: cardio
